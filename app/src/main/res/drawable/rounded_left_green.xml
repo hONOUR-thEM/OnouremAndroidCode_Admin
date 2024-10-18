@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background Color -->
+    <solid android:color="@color/color_green" />
+
+    <!-- Border Color -->
+    <!--    <stroke-->
+    <!--        android:width="0.7dp"-->
+    <!--        android:color="@color/color_pink" />-->
+
+    <!-- Round Corners -->
+    <corners
+        android:bottomLeftRadius="16dp"
+        android:bottomRightRadius="0dp"
+        android:topLeftRadius="16dp"
+        android:topRightRadius="0dp" />
+    <padding android:top="8dp" />
+    <padding android:bottom="8dp" />
+    <padding android:left="8dp" />
+    <padding android:right="8dp" />
+
+</shape>

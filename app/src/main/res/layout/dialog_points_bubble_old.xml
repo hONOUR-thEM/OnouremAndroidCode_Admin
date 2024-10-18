@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/tvQuestionPoints"
+        style="@style/AppTextView.ExtraSmallTextBody.Bold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_filled_circle"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:padding="3dp"
+        android:singleLine="false"
+        android:textColor="@color/color_white"
+        tools:showIn="@layout/dialog_answer_question"
+        tools:text="10\nPoints" />
+</layout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/bottomSheetCL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_sheet_rounded_corner"
+            android:orientation="vertical"
+            android:padding="8dp"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_optimizationLevel="cache_measures">
+
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="6dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/shape_filled_rectangle_accent_color"
+                    app:layout_constraintBottom_toTopOf="@+id/tvDialogTitle"
+                    app:layout_constraintDimensionRatio="H, 1:20"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cardOnline"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:text="14416"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="10dp"
+                    app:cornerRadius="40dp"
+                    app:elevation="5dp"
+                    app:fontFamily="@font/montserrat_bold"
+                    app:icon="@drawable/ic_call"
+                    app:iconGravity="textStart"
+                    app:iconSize="36dp"
+                    app:iconTint="@android:color/white"
+                    app:iconTintMode="multiply"
+                    app:layout_constraintBottom_toTopOf="@+id/cardOffLine"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/bg_dashboard_vertical_view"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/cardOffLine" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cardOffLine"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:text="1-800 891 4416"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    app:cardBackgroundColor="@color/colorAccent"
+                    app:cardCornerRadius="10dp"
+                    app:cornerRadius="40dp"
+                    app:elevation="5dp"
+                    app:fontFamily="@font/montserrat_bold"
+                    app:icon="@drawable/ic_call"
+                    app:iconGravity="textStart"
+                    app:iconSize="36dp"
+                    app:iconTint="@android:color/white"
+                    app:iconTintMode="multiply"
+                    app:layout_constraintBottom_toTopOf="@+id/tvNotRequired"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDialogTitle"
+                    style="@style/AppTextView.LargeTextBody"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:gravity="center_horizontal"
+                    android:text="Tele MANAS"
+                    android:textAllCaps="false"
+                    android:textSize="16dp"
+                    app:fontFamily="@font/montserrat_semibold"
+                    app:layout_constraintBottom_toTopOf="@+id/tvDialogSubtext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDialogSubtext"
+                    style="@style/AppTextView.SmallTextBody"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="Tele MANAS is a comprehensive mental health care service. You can dial the Toll free numbers above to get in touch with our Counsellor."
+                    app:layout_constraintBottom_toTopOf="@+id/cardOnline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tvNotRequired"
+                    style="@style/AppTheme.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="I don\'t required Counselling"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

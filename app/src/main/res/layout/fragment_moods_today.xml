@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/bottomSheetCL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:id="@+id/constraintLayoutBS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_sheet_rounded_corner"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_optimizationLevel="cache_measures">
+
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="6dp"
+                    android:background="@drawable/shape_filled_rectangle_accent_color"
+                    app:layout_constraintDimensionRatio="H, 1:20"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDialogTitle"
+                    style="@style/AppTextView.MediumTextBody.Bold"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:clickable="false"
+                    android:gravity="center_horizontal"
+                    android:text="See "
+                    android:textAllCaps="false"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    tools:text="title" />
+
+
+                <com.onourem.android.activity.ui.dashboard.HeightWrappingViewPager
+                    android:id="@+id/rvWatchlist"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/indicator"
+                    app:layout_constraintEnd_toStartOf="@+id/btnNext"
+                    app:layout_constraintStart_toEndOf="@+id/btnPrev"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnPrev"
+                    android:layout_width="24dp"
+                    android:layout_height="0dp"
+                    android:background="@null"
+                    android:tint="@color/colorAccent"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/rvWatchlist"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/rvWatchlist"
+                    app:srcCompat="@drawable/ic_left_arrow" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnNext"
+                    android:layout_width="24dp"
+                    android:layout_height="0dp"
+                    android:background="@null"
+                    android:tint="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="@+id/rvWatchlist"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/rvWatchlist"
+                    app:srcCompat="@drawable/ic_next_arrow" />
+
+                <com.onourem.android.activity.ui.utils.bubbleindicator.BubblePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    app:bpi_fillColor="@color/gray"
+                    app:bpi_marginBetweenCircles="6dp"
+                    app:bpi_onSurfaceCount="@integer/default_bubble_indicator_on_surface_count"
+                    app:bpi_pageColor="@color/colorPrimary"
+                    app:bpi_radius="4dp"
+
+                    app:bpi_risingCount="@integer/default_bubble_indicator_rising_count"
+                    app:layout_constraintBottom_toTopOf="@+id/tvDialogSubtext"
+                    app:layout_constraintEnd_toEndOf="@+id/rvWatchlist"
+                    app:layout_constraintStart_toStartOf="@+id/rvWatchlist" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDialogSubtext"
+                    style="@style/AppTextView.MediumTextBody"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:text="It feels great to hear from a close one.\nReach out when you can"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="message" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="24dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_anchor="@id/clBottom"
+                app:layout_anchorGravity="top|end"
+                app:layout_constraintBottom_toBottomOf="@+id/constraintLayoutBS"
+                app:layout_constraintBottom_toTopOf="@+id/constraintLayoutBS"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayoutBS">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivClose"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:tint="@color/colorAccent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_cross_black_24dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

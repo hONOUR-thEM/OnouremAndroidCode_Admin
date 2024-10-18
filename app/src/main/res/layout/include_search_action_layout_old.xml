@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOutsideOnourem"
+            style="@style/AppButton.OrangeButton.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/label_outside_onourem"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvOr"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:text="@string/label_or"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="@+id/btnOnOnourem"
+            app:layout_constraintEnd_toStartOf="@+id/btnOutsideOnourem"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnOnOnourem"
+            app:layout_constraintTop_toTopOf="@+id/btnOnOnourem" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOnOnourem"
+            style="@style/AppButton.OrangeButton.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/label_on_onourem"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/btnOutsideOnourem"
+            app:layout_constraintEnd_toStartOf="@+id/tvOr"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tilFriendName"
+            style="@style/AppTheme.EditText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_border"
+            android:drawableStart="@drawable/ic_search_black_24dp"
+            android:drawableLeft="@drawable/ic_search_small_black_24dp"
+            android:drawablePadding="4dp"
+            android:hint="@string/hint_enter_friend_s_name"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:paddingLeft="5dp"
+            android:paddingEnd="24dp"
+            android:paddingRight="24dp"
+            android:singleLine="true"
+            android:visibility="gone"
+            app:drawableTint="@color/color_gray_cross"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnOutsideOnourem"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ibEndIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="?selectableItemBackground"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tilFriendName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tilFriendName"
+            app:srcCompat="@drawable/ic_cross_black_24dp"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_icon_menu"
+            android:title="Home" />
+
+        <!--        <item-->
+        <!--            android:id="@+id/nav_audio_games"-->
+        <!--            android:icon="@drawable/ic_audio_vocals"-->
+        <!--            android:title="@string/menu_audio_games" />-->
+
+        <item
+            android:id="@+id/nav_vocals_main"
+            android:icon="@drawable/ic_audio_vocals"
+            android:title="@string/menu_audio_games" />
+
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/ic_notifications"
+            android:title="@string/menu_notifications" />
+
+        <item
+            android:id="@+id/nav_conversations"
+            android:icon="@drawable/ic_chat"
+            android:title="@string/menu_message" />
+
+        <!--        <item-->
+        <!--            android:id="@+id/nav_search"-->
+        <!--            android:icon="@drawable/ic_search"-->
+        <!--            android:title="@string/search" />-->
+
+        <item
+            android:id="@+id/nav_hamburger"
+            android:icon="@drawable/ic_hamberger"
+            android:title="Menu" />
+    </group>
+</menu>

@@ -1,0 +1,646 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Admin</string>
+    <string name="base_url_production">https://onouremtv.com/onouremweb/bnn/</string>
+    <!--    <string name="base_url_development">http://onourem-dev-load-balancer2021-1925123273.us-west-2.elb.amazonaws.com/onouremweb/bnn/</string>-->
+    <string name="base_url_development">https://onourem.net/onouremweb/bnn/</string>
+    <string name="base_url_local">@string/base_url_production</string>
+
+    <string name="label_continue">Continue</string>
+    <string name="label_page1_title">An Emotional Network of your close ones</string>
+    <string name="label_page1_desc" />
+    <string name="label_page2_title">Questions that spark meaningful conversations</string>
+    <string name="label_page2_desc" />
+    <string name="label_page3_title">Answer daily and feel the warmth of your relations</string>
+    <string name="label_page3_desc" />
+    <string name="label_page4_title">Try with few friends to fall in love with Onourem</string>
+    <string name="label_page5_title">Watch these intro videos.</string>
+    <string name="label_page5_title2">Watch these intro videos to learn about Onourem</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_message">Chat</string>
+    <string name="menu_notifications">Notifications</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_dashboard">Mood &amp; Watchlist</string>
+    <string name="menu_audio_games">Vocals</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_privacy_groups">Privacy Groups</string>
+    <string name="menu_oclubs_groups">My O-Clubs</string>
+    <string name="menu_invite_friends">Invite Friends</string>
+    <string name="menu_apply_ambassador">Apply Ambassador</string>
+    <string name="menu_friends">Friends</string>
+    <string name="label_friends">Friends</string>
+    <string name="label_answers">Answers</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_report_problem">Report Problem</string>
+    <string name="menu_contact_us">Contact Us</string>
+    <string name="menu_onourem_intro">Onourem Intro</string>
+    <string name="menu_review_onourem">Review Onourem</string>
+    <string name="menu_logout">Logout</string>
+    <string name="open_drawer">Open drawer</string>
+
+    <string name="label_log_in_with_facebook">Log In with Facebook</string>
+    <string name="label_reset_password">Reset Password</string>
+    <string name="label_sign_up_description">To see Sign Up option, launch Onourem app by clicking on the link you have received from a friend in an email or message.</string>
+    <string name="label_log_in">Log In</string>
+    <string name="label_dont_have_account">Don\'t have an account?</string>
+    <string name="label_forgot_password">Forgot Password?</string>
+    <string name="hint_password">Password</string>
+    <string name="label_sign_up">Sign Up</string>
+    <string name="label_or">Or</string>
+    <string name="label_email">Email</string>
+    <string name="msg_forgot_password_description">Let us help you with your password.</string>
+    <string name="label_back_to_log_in">Back to Log In</string>
+    <string name="label_male">Male</string>
+    <string name="label_trans">Trans</string>
+    <string name="label_female">Female</string>
+    <string name="label_re_password">Re-Password</string>
+    <string name="label_terms_and_conditions">T&amp;C and Privacy Policy</string>
+    <string name="label_by_signing_up_you_agree_to">By signing up, you agree to</string>
+    <string name="label_already_have_an_account">Already have an account?</string>
+    <string name="label_gender">Gender</string>
+    <string name="label_profession">Profession</string>
+    <string name="label_last_name">Last name</string>
+    <string name="label_first_name">First name</string>
+    <string name="label_submit">Submit</string>
+    <string name="label_question">Question</string>
+    <string name="label_show_all_surveys">Show All Surveys</string>
+    <string name="label_over_all">Overall</string>
+    <string name="label_age">Age</string>
+
+    <!--    <string name="tile_image_dimens_ratio">W,1:0.50</string>-->
+    <!--    <string name="small_tile_image_dimens_ratio">W,1:0.20</string>-->
+    <!--    <string name="tile_text_dimens_ratio">H,1:0.45</string>-->
+
+    <!--    <string name="facebook_app_id">166102741500914</string>-->
+    <string name="facebook_app_id">288434841545498</string>
+    <string name="fb_login_protocol_scheme">fb288434841545498</string>
+    <string name="facebook_client_token">f79944cf6730de48c891e8729a4aee0d</string>
+
+    <string name="label_question_games">Question Games</string>
+    <string name="label_question_games_left">Solo</string>
+    <string name="label_question_games_right">O-Clubs</string>
+    <string name="label_question_games_title">Question Games</string>
+    <string name="label_anonymous_surveys">Surveys</string>
+    <string name="label_appreciate">Appreciate</string>
+    <string name="label_question_create">Create Q</string>
+    <string name="label_create_question">Watch List</string>
+    <string name="label_points">Points</string>
+    <string name="menu_all_servey">Surveys</string>
+    <string name="menu_statistics">Statistics</string>
+    <string name="menu_anonymous_survey">Survey</string>
+    <string name="label_request_password">Request Password</string>
+    <string name="label_login">Log In</string>
+
+
+    <string name="label_unspecified">Unspecified</string>
+    <string name="label_older_than_60_yrs">older than 60 yrs</string>
+    <string name="label_40_60_yrs">40–60 yrs</string>
+    <string name="label_25_40_yrs">25–40 yrs</string>
+    <string name="label_17_25_yrs">17–25 yrs</string>
+    <string name="label_less_than_17yrs">less than 17yrs</string>
+    <!--    <string name="label_network_error">Network error</string>-->
+    <string name="label_network_error">Alert</string>
+    <string name="label_ok">OK</string>
+    <string name="next">Next</string>
+
+    <string-array name="gender">
+        <item>@string/label_male</item>
+        <item>@string/label_female</item>
+        <item>@string/label_trans</item>
+    </string-array>
+
+    <string-array name="survey">
+        <item>OpenSurvey</item>
+        <item>AnonymousSurvey</item>
+    </string-array>
+
+    <string-array name="yesNo">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="activityType">
+        <item>1toM</item>
+        <item>Card</item>
+        <item>Task</item>
+        <item>Message</item>
+        <item>Survey</item>
+        <item>External</item>
+
+        <!--"1to1" -> ONE_TO_ONE
+            "Dto1" -> D_TO_ONE
+            "1toM" -> ONE_TO_MANY
+            "Task" -> TASK
+            "Message" -> MESSAGE
+            "ASKTOFRIENDS" -> ASK_TO_FRIENDS
+            "Card" -> CARD
+            "Survey" -> SURVEY
+            "External" -> EXTERNAL
+            "FriendCircleGame" -> FRIEND_CIRCLE_GAME
+            "Post" -> POST-->
+    </string-array>
+
+    <string-array name="profession">
+        <item>Student</item>
+        <item>Working Professional</item>
+        <item>Homemaker</item>
+    </string-array>
+
+    <string-array name="occupation">
+        <item>Student</item>
+        <item>Professional</item>
+        <item>Home Manager</item>
+        <item>Business Owner</item>
+        <item>Retired</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="isYoutube">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string name="label_new_members">New\nMembers</string>
+    <string name="label_new_questions">New\nQuestions</string>
+    <string name="label_new_answers">New\nAnswers</string>
+    <string name="label_solo_games">Solo Games</string>
+    <string name="label_play_independently">Play Independently</string>
+    <string name="label_my_question_history">My Question History</string>
+    <string name="label_play_in_groups">Play in O-Clubs</string>
+    <string name="label_all_questions_played">All Questions Played</string>
+    <string name="label_questions_i_created">Questions I Created</string>
+    <string name="label_admin">Admin</string>
+    <!--    <string name="label_create_friends_group_and_play"><![CDATA[Create Friends Group & Play]]></string>-->
+    <string name="label_create_friends_and_family_group_and_play"><![CDATA[Create Friends or Family O-Club & Play]]></string>
+    <!--    <string name="label_create_family_group_and_play"><![CDATA[Create Family Group & Play]]></string>-->
+    <string name="label_answer">Answer</string>
+    <string name="group_members_can_post_questions">Members can post questions</string>
+    <string name="message_admin_can_post_questions">Who can post questions on the group :</string>
+    <string name="action_label_add_remove_members">Add/Remove Members</string>
+    <string name="action_label_get_invite_link">Get O-Club Invite Link</string>
+    <string name="action_label_see_members">See Members</string>
+    <string name="action_label_exit_group">Exit O-Club</string>
+    <string name="action_label_delete_privacy_group">Delete Group</string>
+    <string name="label_group_name">O-Club Name</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="action_label_un_friend">Un-Friend</string>
+    <string name="action_label_make_group_admin">Make O-Club Admin</string>
+    <string name="action_label_remove_from_play_group">Remove From O-Club</string>
+    <string name="action_label_remove_from_group">Remove From Group</string>
+    <string name="action_label_remove_as_play_group_admin">Remove As O-Club Admin</string>
+    <string name="edit_watch_list">Edit \nWatchlist</string>
+    <string name="add_to_watch_list">Add Friends To Watchlist</string>
+    <string name="label_show_answers">Show Answers</string>
+    <string name="label_send_now">Send Now</string>
+    <string name="message_no_one_has_asked_any_question_in_this_group_so_far_ask_a_question_to_start_having_fun">No one has asked any question in this O-Club so far. Ask a question to start having fun.</string>
+    <string name="find_more_friends">Find More Friends</string>
+    <string name="isnt_on_ur_watchlist">isn\'t on your WatchList</string>
+    <string name="action_label_remove_from_watch_list">Remove from WatchList</string>
+    <string name="action_label_reject_from_watch_list">Reject WatchList Request</string>
+    <string name="watch_list">Watch List</string>
+    <string name="label_photo_library">Photo : Open Library</string>
+    <string name="label_photo_camera">Photo : Open Camera</string>
+    <string name="label_video_library">Video : Open Library</string>
+    <string name="label_youtube_video">Youtube Video : Add Link</string>
+    <string name="label_video_camera">Video : Open Camera</string>
+    <string name="label_done">Done</string>
+    <string name="label_select_privacy">Select Privacy</string>
+    <string name="label_edit_privacy">Edit Privacy</string>
+    <string name="label_send_to_a_friend">Send To A Friend</string>
+    <string name="label_enter_name_to_find_a_friend">Enter name to find a friend</string>
+    <string name="label_outside_onourem">Outside Onourem</string>
+    <string name="label_on_onourem">On Onourem</string>
+    <string name="hint_enter_friend_s_name">Enter Friend\'s Name</string>
+    <string name="label_go_back">Continue</string>
+    <string name="label_go_back_2">Go Back</string>
+    <string name="create_your_own_ques">Create Your Own Question</string>
+    <string name="title_appreciate_dialog">Your kind words or thoughtful reflection can brighten someone\'s day. Send appreciation messages or share introspective thoughts.</string>
+    <string name="title_compose_message">Compose Message</string>
+    <string name="label_ask_this_to_friends">Ask this to friends</string>
+    <string name="click_action_ask_friends">Ask Friends</string>
+
+    <string name="click_action_all_answers">All Answers</string>
+    <string name="click_action_ask_question">Ask Question</string>
+    <string name="click_action_answer">Answer</string>
+    <string name="click_action_send_to_friends">Share</string>
+    <string name="click_action_all_cards">All Cards</string>
+    <string name="click_action_share">Share</string>
+    <string name="click_action_show_more">Show More</string>
+    <string name="click_action_see_stats">See Stats</string>
+    <string name="click_action_send_message">Send Message</string>
+    <string name="click_action_i_will_do_it">I Will Do It</string>
+    <string name="click_action_share_experience">Share Experience</string>
+    <string name="click_action_read_experience">Read/Share Experiences</string>
+    <string name="click_action_i_want_to_send">I Want To Send</string>
+    <string name="click_action_send_now">Send Now</string>
+    <string name="click_action_read_messages">Read/Share Messages</string>
+
+    <string name="msg_forward_this_questions_to_more_friends">Forward this questions to more friends</string>
+    <string name="no_internet_message">Please check your internet connection</string>
+    <string name="unable_to_connect_host_message">Unable to resolve host</string>
+    <string name="unable_to_connect_host_message1">Could not connect to server</string>
+    <string name="network_error_title">Network Error</string>
+    <string name="network_error_title_1">Error</string>
+    <string name="network_error_text_1">Network error occurred, Please try again later.</string>
+    <string name="label_off">OFF</string>
+    <string name="label_auto_delete">Autodelete</string>
+    <string name="label_on">ON</string>
+    <string name="hint_enter_name_to_search">Enter Name To Search</string>
+    <string name="hint_enter_group_name_to_search">Search</string>
+    <string name="message_no_users_found_with_this_search_please_modify_your_search_text">No users found with this search. Please modify your search text.</string>
+    <string name="label_my_friends">My Friends</string>
+    <string name="label_you_may_know">You may know</string>
+    <string name="label_search_results">Search Results</string>
+    <string name="message_invite_earn_up_to_5_points_by_answering_a_question_and_10_points_when_a_friend_joins_onourem_using_your_invitation_at_200_points_grab_your_first_coffee_gift_card_if_at_least_two_of_the_friends_you_invited_joined_onourem_nearn_more_to_win_more">Earn up to 5 points by answering a question and 10 points when a friend joins Onourem using your invitation. At 200 points, grab your first coffee gift card if at least two of the friends you invited joined Onourem.\nEarn more to win more.</string>
+    <string name="label_invite">Invite</string>
+    <string name="message_no_friends_found">You do not have any friends to enjoy Onourem with.\nSearch or invite your friends and family to join Onourem and earn points.</string>
+    <string name="message_no_friend_suggestions_found">No friend suggestions yet. Make few friends to start seeing suggestions here</string>
+    <string name="click_action_start_game">Start Game</string>
+    <string name="label_friend_on_onourem">Friend On Onourem</string>
+    <string name="label_a_play_group">An O-Club</string>
+    <string name="label_ask_this_question_to">Ask this question to</string>
+    <string name="label_ask_this_question">Ask This Question</string>
+    <string name="label_send">Send</string>
+    <string name="action_label_set_group_name">Set Group Name</string>
+    <string name="action_label_privacy_group_name">Group Name</string>
+    <string name="label_set_play_group_name">O-Club Name</string>
+    <string name="label_answer_question">Answer Question</string>
+    <string name="label_confirm">Confirm</string>
+    <string name="label_send_later">Send Later</string>
+    <string name="message_report_inappropriate">Do you want to report this content as inappropriate?</string>
+    <string name="message_report_post_abuse">Do you want to report this post for inappropriate content?</string>
+    <string name="message_delete">Do you want to delete this answer?</string>
+    <string name="message_cancel_game">Do you want to cancel this game?</string>
+    <string name="message_delete_game">Do you want to delete this game?</string>
+    <string name="message_delete_post">Do you want to delete this post?</string>
+    <string name="message_ignore_game">Do you want to ignore this game?</string>
+    <string name="label_write_your_comment">Write your comment</string>
+    <string name="label_comment">Comment</string>
+    <string name="label_play_with_specific_person">Play With Specific Person</string>
+    <string name="title_two_way_question">2-Way Question</string>
+    <string name="title_one_way_question">1-WAY QUESTION</string>
+    <string name="label_play_solo">Play Solo</string>
+    <string name="label_list_of_receivers">List Of Receivers</string>
+    <string name="title_appreciate_message">HEARTFELT MESSAGE</string>
+    <string name="title_act_of_kindness">WELLBEING ACTIVITY</string>
+    <string name="action_label_reject_friend_request">Reject Friend Request</string>
+    <string name="label_add_friend">+ Friend</string>
+    <string name="label_add_friends">Add Friends</string>
+    <string name="label_friends_with_checkmark_icon">\u2713 Friends</string>
+    <string name="label_accept">Accept</string>
+    <string name="label_ignore">Ignore</string>
+    <string name="title_my_profile">My Profile</string>
+    <string name="title_friends_profile">Friend\'s Profile</string>
+    <string name="title_message_details">Message</string>
+    <string name="title_external_post_details">Gems From Internet</string>
+    <string name="label_settings_row_1">Edit Profile Details</string>
+    <string name="label_settings_row_2">Block List</string>
+    <string name="label_settings_row_3">Terms and Conditions</string>
+    <string name="label_settings_row_4">Privacy Policy</string>
+    <string name="label_settings_row_5">Community Guidelines</string>
+    <string name="label_settings_row_6">Delete Account</string>
+    <string name="label_settings_row_7">Push Notification Settings</string>
+    <string name="label_change_picture">Change Picture</string>
+    <string name="error_while_processing_image_request">Error while processing image request.</string>
+    <string name="label_name">Name</string>
+    <string name="label_password">Password</string>
+    <string name="label_location">Location</string>
+    <string name="label_about_onourem">About Onourem</string>
+    <string name="label_profile_settings">Profile Settings</string>
+    <string name="hint_old_password">Enter Old Password</string>
+    <string name="hint_new_password">Enter New Password</string>
+    <string name="hint_new_password_again">Enter New Password Again</string>
+
+    <string name="message_block_list_you_have_not_blocked_anyone_so_far">You have not blocked anyone so far</string>
+    <string name="label_unblock">Un-block</string>
+    <string name="label_yes">Yes</string>
+    <string name="label_no">No</string>
+    <string name="label_delete_account">Delete Account</string>
+    <string name="message_delete_account">What does account deletion mean:</string>
+    <string name="message_delete_account1">▪	Deleting your account will delete all of your data from Onourem database including text, media and connections. This step is non-recoverable.</string>
+    <string name="message_delete_account2">▪	If you delete your account, you will have to signup again to start using Onourem again.</string>
+    <string name="label_country">Country</string>
+    <string name="label_city">City</string>
+    <string name="label_state">State</string>
+
+    <string name="title_people">People</string>
+    <string name="message_hate_to_see_you_go">Hate to see you go!</string>
+    <string name="label_resend_link">Resend Link</string>
+    <string name="label_public">Public</string>
+    <string name="label_privacy">Privacy</string>
+    <string name="label_please_enter_your_message_below">Please enter your message below</string>
+    <string name="msg_we_have_sent_you_a_verification_email_at_the_email_address_you_have_used_for_this_account_please_click_on_the_verification_link_in_the_email_to_activate_your_account_n_nafter_verifying_your_account_hit_continue_button_below_to_get_started">We have sent you a verification email at the email address you have used for this account. Please click on the verification link in the email to activate your account. \n\nAfter verifying your account, hit CONTINUE button below to get started.</string>
+    <string name="msg_you_did_not_receive_any_notifications_so_far">You did not receive any notifications so far.</string>
+    <string name="unable_to_connect_host_message3">Bad Gateway</string>
+    <string name="action_cancel_friend_request">Cancel Friend Request</string>
+    <string name="action_block">Block</string>
+    <string name="action_block_report">Block And Report</string>
+    <string name="label_dismiss">Dismiss</string>
+    <string name="label_tick_accept_request">✔</string>
+    <string name="label_cross_accept_request">✘</string>
+    <string name="invitation_link_not_valid">This link is not valid. Please request the person who sent you the link to send you another one.</string>
+    <string name="label_new_group">New Privacy Group</string>
+    <string name="label_new_o_club">New O-Club</string>
+    <string name="set_a_time_to_receive_summary_of_account_activity_through_notification_and_email">Set a time to receive summary of account activity through notification and email</string>
+    <string name="label_push_notification_settings">Push Notification</string>
+    <string name="save">Save</string>
+    <string name="label_new_create_question">Create</string>
+    <string name="label_my_o_club">My O-Clubs</string>
+    <string name="label_invite_o_club">O-Club Invite Link</string>
+    <string name="label_what_is_o_club">What Is O-Club?</string>
+    <string name="label_friends_playing">Friends Playing</string>
+    <string name="enter_text_here">Search VOCALS by user</string>
+    <string name="enter_text_here_title">Search VOCALS by Title</string>
+    <string name="enter_audio_here">Search Audio Name</string>
+    <string name="label_all_questions">All Questions</string>
+    <string name="label_btn_2">Button 2</string>
+    <string name="label_btn_1">Button 1</string>
+    <string name="max_video_time">Maximum duration allowed for videos is 1 minute. Please select a different video.</string>
+    <string name="action_label_edit">Edit</string>
+    <string name="action_label_copy">Copy</string>
+    <string name="action_label_stats">Stats</string>
+    <string name="action_label_edit_privacy">Edit Privacy</string>
+    <string name="action_label_update_title">Rename Title</string>
+    <string name="action_label_delete">Delete</string>
+    <string name="action_label_ignore">Ignore</string>
+    <string name="edit_question">Edit Your Question</string>
+    <string name="action_label_ignore_confirm">Remove</string>
+    <string name="action_label_delete_confirm">Confirm Delete</string>
+    <string name="label_search_question">Search Question</string>
+    <string name="message_irrelevant_response">Do you want to mark it as IRRELEVANT?</string>
+    <string name="label_only_creator_can_change">Only Creator of this O-Club can change this settings.</string>
+    <string name="label_creator">Creator</string>
+    <string name="message_language_selection">Your language selection will help us post more relevant questions in this O-Club in the future.</string>
+    <string name="label_category">Category</string>
+    <string name="no_internet">No Internet</string>
+    <string name="label_ask_why">Ask Why</string>
+    <string name="label_notifications">Notifications</string>
+    <string name="hint_enter_other_text">Write here</string>
+    <string name="lebal_record">Share Something</string>
+    <string name="lebal_record_title">Thoughts, Experiences, Ideas, Jokes, Observations, Suggestions, Anything</string>
+    <string name="lebal_vocals">Trending Vocals</string>
+
+
+    <string name="text_long">testestetestestetestestestetestestetestestestetestestetestestestetestestetestestestetestestetestestestetestestetestestestetestestetestestestetestestetestestestetestestetestestestetestestetestestestetestestetestestestetestestetes</string>
+    <string name="text_short">testestetestestetes</string>
+    <string name="play_initial_time">00:00</string>
+    <string name="track_number">Track</string>
+    <string name="description_icon_player">player icon</string>
+    <string name="description_play_button">play/pause button</string>
+    <string name="description_previous_button">previous button</string>
+    <string name="description_next_button">next button</string>
+    <string name="description_repeat_button">repeat button</string>
+    <string name="description_shuffle_button">shuffle button</string>
+    <string name="action_label_report_inappropriate">Report Inappropriate</string>
+    <string name="action_label_delete_comment">Delete Comment</string>
+    <string name="action_label_send_private_message">Send Private Message</string>
+    <string name="action_label_show_audios">Show Audios of This User</string>
+    <string name="action_label_trending">Trending</string>
+    <string name="action_label_edit_audio_yes">Yes</string>
+    <string name="action_label_edit_audio_no">No</string>
+    <string name="action_label_un_follow">Unfollow</string>
+    <string name="action_label_follow">Follow</string>
+    <string name="action_label_friends">Friends</string>
+    <string name="action_label_my_vocals">My Vocals</string>
+    <string name="action_label_fav">Favorite</string>
+    <string name="message_no_vocals">No vocals yet.</string>
+    <string name="action_label_share_audios">Share</string>
+
+
+    <!--
+        Main / media select activity
+        -->
+
+    <string name="main_activity_label">Ringdroid</string>
+
+    <string name="search_edit_box">Search</string>
+
+    <string name="button_start_record_activity">Record New</string>
+
+    <string name="sdcard_readonly">Sorry, the SD Card is mounted as read-only and Ringdroid requires it to be writable.</string>
+    <string name="no_sdcard">Sorry, Ringdroid can\'t run unless you have an SD Card inserted.</string>
+    <string name="sdcard_shared">Sorry, Ringdroid can\'t run while your handset is mounted as a USB device.</string>
+
+    <string name="button_options">Options</string>
+    <string name="about_title">About Ringdroid</string>
+    <string name="about_text"><![CDATA[Use Ringdroid to edit MP3, OGG, WAV, AAC, and AMR audio files and create ringtones, alarms, and notifications from them.\n\nTip: copy audio files to your SD card using a USB cable.\n\nTip: tap anywhere on the waveform to start playing at that position.\n\nTip: while playing, tap the word Start or End to quickly set the start and end markers to the current playback time.\n\nVersion %s\n\nDeveloper: Dominic Mazzoni, Nicolas Faralli\nGraphics: Joseph Wain\nSupport and evangelizing: Eugene Koh\nEnhancements: Dan Klufas\n\nRingdroid is free software, distributed under the Apache 2.0 license.  Source code is on github.com/google/ringdroid\n]]></string>
+
+    <string name="choose_contact_title">Assign ringtone to which contact?</string>
+    <string name="success_contact_ringtone">Successfully assigned ringtone to:</string>
+
+
+    <string name="bad_extension_error">Sorry, Ringdroid is not yet able to edit files of type</string>
+    <string name="no_extension_error">Sorry, Ringdroid can\'t edit a file if it doesn\'t have an extension like .mp3 or .wav</string>
+
+
+    <!--
+     Edit activity
+     -->
+
+    <!-- Labels next to the start and end time edit boxes -->
+    <string name="start_label">Start:\n(Sec)</string>
+    <string name="end_label">End:\n(Sec)</string>
+
+    <string name="edit_intent">Edit</string>
+
+    <string name="time_seconds">seconds</string>
+
+    <!-- After you save a notification or ringtone and have more options
+         for what to do with them -->
+    <string name="what_to_do_with_ringtone">Saved!  Make this your default ringtone or assign it to a contact?</string>
+    <string name="set_default_notification">Saved!  Make this your default notification?</string>
+
+    <string name="make_default_ringtone_button">Make Default</string>
+    <string name="choose_contact_ringtone_button">Assign to Contact</string>
+    <string name="do_nothing_with_ringtone_button">Close</string>
+
+    <!-- Progress dialog text for loading, recording, or saving... -->
+    <string name="progress_dialog_loading">Loading…</string>
+    <string name="progress_dialog_recording">Recording…</string>
+    <string name="progress_dialog_saving">Saving…</string>
+    <string name="progress_dialog_cancel">Cancel</string>
+    <string name="progress_dialog_stop">Stop</string>
+
+    <!-- Image button descriptions for accessibility -->
+
+    <string name="start_marker">Start marker</string>
+    <string name="end_marker">End marker</string>
+    <string name="rewind">Rewind</string>
+    <string name="ffwd">Fast forward</string>
+    <string name="zoom_in">Zoom In</string>
+    <string name="zoom_out">Zoom Out</string>
+    <string name="save_button">Save</string>
+
+    <!--
+     Menu items
+     -->
+
+    <string name="menu_save">Save</string>
+    <string name="menu_reset">Reset</string>
+    <string name="menu_about">About</string>
+    <string name="menu_show_all_audio">Show All Audio</string>
+
+    <!--
+     Context menu items
+     -->
+
+    <string name="context_menu_edit">Edit</string>
+    <string name="context_menu_delete">Delete</string>
+    <string name="context_menu_default_ringtone">Set as Default Ringtone</string>
+    <string name="context_menu_contact">Assign to Contact</string>
+    <string name="context_menu_default_notification">Set as Notification tone</string>
+    <string name="save_success_message">Saved!</string>
+    <string name="default_ringtone_success_message">Changed default ringtone</string>
+    <string name="default_notification_success_message">Changed default notification sound</string>
+    <string name="play_error">Unable to play this media file</string>
+    <string name="no_unique_filename">Unable to find unique filename</string>
+    <string name="record_error">Error recording audio</string>
+    <string name="too_small_error">Can\'t save a file that small, try making it longer.</string>
+    <string name="write_error">Error writing file</string>
+    <string name="read_error">Error reading file</string>
+
+    <string name="no_space_error">Your SD card is full, there is not enough space to save this file.</string>
+
+    <!--
+     File Save dialog
+     -->
+
+    <string name="file_save_title">Save As:</string>
+    <string name="file_save_button_save">Save</string>
+    <string name="file_save_button_cancel">Cancel</string>
+
+    <string name="ringtone_type_label">Type:</string>
+
+    <string name="type_music">Music</string>
+    <string name="type_alarm">Alarm</string>
+    <string name="type_notification">Notification</string>
+    <string name="type_ringtone">Ringtone</string>
+
+    <string name="ringtone_name_label">Name:</string>
+    <!--
+     Delete confirmation dialog
+     -->
+
+    <string name="delete_ringtone">Delete Ringtone</string>
+    <string name="delete_alarm">Delete Alarm</string>
+    <string name="delete_notification">Delete Notification</string>
+    <string name="delete_music">Delete Music</string>
+    <string name="delete_audio">Delete Audio</string>
+
+    <string name="confirm_delete_ringdroid">Are you sure?</string>
+    <string name="confirm_delete_non_ringdroid">Are you sure?  This file was not created using Ringdroid!</string>
+
+    <string name="delete_ok_button">Delete</string>
+    <string name="delete_cancel_button">Cancel</string>
+
+    <string name="delete_failed">Unable to delete file</string>
+    <string name="artist_name">Ringdroid artist</string>
+
+
+    <!--
+     Success and error message
+     -->
+
+    <string name="alert_title_success">Success</string>
+    <string name="alert_title_failure">Error</string>
+    <string name="alert_ok_button">OK</string>
+    <string name="alert_yes_button">Yes, please!</string>
+    <string name="alert_no_button">No, thanks.</string>
+    <string name="play">play</string>
+    <string name="stop">Stop.</string>
+    <string name="search">Search</string>
+
+
+    <string name="combine_two_strings" translatable="false">%1$s | %2$s</string>
+    <string name="duration_format" translatable="false"><xliff:g id="hours">%1$s</xliff:g> <xliff:g id="minutes">%2$s</xliff:g></string>
+    <string name="durationformatshort" translatable="false"><xliff:g id="format">%2$d:%3$02d</xliff:g></string>
+    <string name="durationformatlong" translatable="false"><xliff:g id="format">%1$d:%2$02d:%3$02d</xliff:g></string>
+    <string name="ringtone_set">Ringtone set.</string>
+    <string name="set_ringtone">Set Ringtone!</string>
+    <string name="write_setting_text">Ringtone make requiers permission to \'Write Settings\' in order to set your ringtone.\n After granting permission, try setting your ringtone again.</string>
+    <string name="permission_required">Permission required.</string>
+    <string name="permission_required_desc">Allow Bell to access your ringtones and music library</string>
+    <string name="allow">Allow</string>
+    <string name="contacts">Contacts</string>
+    <string name="search_library">Search..</string>
+
+    <string name="audio_player_service">OnouremMusic</string>
+    <string name="channel_name">Onourem Audio Channel</string>
+    <string name="channel_des">Onourem</string>
+    <string name="title_conversations">Messages</string>
+    <string name="message_hint">Type Here</string>
+    <string name="send">send</string>
+    <string name="enter_friend_name">Enter Friend\'s Name Here</string>
+    <string name="tabVocalsTrending">Trending</string>
+    <string name="tabVocalsFriends">Friends</string>
+    <string name="tabMyVocals">My Vocals</string>
+    <string name="tabVocalsFavorite">Favorite</string>
+    <string name="action_label_search_by_user">Search By User</string>
+    <string name="action_label_search_by_title">Search By Vocal Title</string>
+    <string name="action_label_pending">Pending</string>
+    <string name="action_label_approved_scheduled">Approved &amp; Scheduled</string>
+    <string name="action_label_approved_published">Approved &amp; Published</string>
+    <string name="action_label_approved_un_scheduled">Approved &amp; Un-Scheduled</string>
+    <string name="action_label_blacklisted">Blacklisted</string>
+    <string name="action_label_deleted">Deleted</string>
+    <string name="action_label_rejected">Rejected</string>
+    <string name="message_reschedule">Do you want to reschedule this audio?</string>
+    <string name="label_confirm_ui">Do you want to blacklist this audio?</string>
+    <string name="action_label_edit_rating">Edit Rating</string>
+    <string name="action_label_edit_schedule">Edit Schedule</string>
+    <string name="action_label_blacklist">Add to Blacklist</string>
+    <string name="action_label_remove_from_tv">Remove From TV</string>
+
+    <string name="create_new_system_question">Create System Question</string>
+    <string name="create_system_question">Schedule System Question</string>
+
+    <string name="tabFriendsPlaying">Trending</string>
+    <string name="tabPlayed">Answered</string>
+    <string name="tabMyQuestions">My Question</string>
+    <string name="label_log_in_guest">Explore As Guest</string>
+    <string name="action_label_guest">Login</string>
+<!--    <string name="GOOGLE_API_KEY">AIzaSyAGVypxjA6tNRll-iVGe_xQSHjK_VLISH4</string>-->
+    <string name="phone">Phone</string>
+    <string name="title_activity_call">CallActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="menu_fc">Bond-003 Game</string>
+    <!--    <string name="GOOGLE_API_KEY">AIzaSyA0ocHgt8XVjLvTCEagCNkIRjwBo6hVzeQ</string>old-->
+
+    <string name="Rs">\u20B9</string>
+    <string name="menu_subscription">Subscription</string>
+    <string name="label_share">Share</string>
+
+    <string name="menu_upload">Upload Images</string>
+    <string name="menu_survey">Add Survey</string>
+    <string name="enter_survey_text">Enter Survey Text</string>
+    <string name="label_option_1">Option 1</string>
+    <string name="label_option_2">Option 2</string>
+    <string name="label_option_3">Option 3</string>
+    <string name="label_option_4">Option 4</string>
+    <string name="label_option_5">Option 5</string>
+    <string name="label_option_6">Option 6</string>
+    <string name="label_option_7">Option 7</string>
+    <string name="label_option_8">Option 8</string>
+    <string name="label_date">Select Date</string>
+    <string name="label_success">Survey Added Successfully</string>
+    <string name="enter_duration_in_months">Enter Duration In Months</string>
+    <string name="enter_duration_in_days">Enter Duration In Days</string>
+    <string name="add_subscription">Add Subscription</string>
+    <string name="enter_package_name">Enter Package Name</string>
+    <string name="enter_cost">Enter Cost</string>
+    <string name="enter_discounted_cost">Enter Discounted Cost</string>
+    <string name="enter_free_invite_number">Enter Free Invite Number</string>
+    <string name="enter_free_invite_package_id">Enter Free Invite Package ID</string>
+    <string name="enter_description_text">Enter Description Text</string>
+    <string name="add_subscription_discount">Subscription Discount</string>
+    <string name="institute_code">Institute Code</string>
+    <string name="package_code">Package Code</string>
+    <string name="code_validity">Code Validity</string>
+    <string name="category_code">Package Category Code</string>
+    <string name="number_of_codes">Number Of Codes (Max 3000)</string>
+    <string name="label_update">Update</string>
+    <string name="label_activity_type">Activity Type</string>
+    <string name="options_what_do_you_want_to_do">Options\n\nWhat do you want to do?</string>
+
+</resources>

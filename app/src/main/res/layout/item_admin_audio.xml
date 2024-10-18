@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_cardview_white_8_dp"
+        android:padding="8dp"
+        app:layout_optimizationLevel="cache_measures">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/rivProfile"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="W,1:1"
+            app:layout_constraintEnd_toStartOf="@+id/guideline18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvStatus" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.20" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCategoryType"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Category"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserName"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/txtApprove"
+            style="@style/AppButton.RoundCornerButton.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="Approve"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:backgroundTint="@color/green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toBottomOf="@+id/mRating" />
+
+        <com.onourem.android.activity.ui.admin.vocals.ratingbar.ScaleRatingBar
+            android:id="@+id/mRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRating"
+            app:layout_constraintStart_toEndOf="@+id/tvRating"
+            app:layout_constraintTop_toTopOf="@+id/tvRating"
+            app:srb_clearRatingEnabled="true"
+            app:srb_clickable="true"
+            app:srb_drawableEmpty="@drawable/ic_empty_star"
+            app:srb_drawableFilled="@drawable/ic_filled_star"
+            app:srb_isIndicator="false"
+            app:srb_minimumStars="0"
+            app:srb_numStars="3"
+            app:srb_rating="0"
+            app:srb_scrollable="true"
+            app:srb_starHeight="24dp"
+            app:srb_starPadding="1dp"
+            app:srb_starWidth="24dp"
+            app:srb_stepSize="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/txtReject"
+            style="@style/AppButton.RoundCornerButton.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:padding="8dp"
+            android:text="Reject"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:backgroundTint="@color/color_6"
+            app:layout_constraintBottom_toBottomOf="@+id/txtApprove"
+            app:layout_constraintStart_toEndOf="@+id/txtApprove"
+            app:layout_constraintTop_toTopOf="@+id/txtApprove" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/txtSchedule"
+            style="@style/AppButton.RoundCornerButton.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:text="Schedule"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:backgroundTint="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="@+id/txtApprove"
+            app:layout_constraintStart_toEndOf="@+id/txtReject"
+            app:layout_constraintTop_toTopOf="@+id/txtApprove"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvUserName"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStatus"
+            style="@style/AppTextView.MediumTextBody.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Playing"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvRating"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Ratings : "
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategoryType"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtDate"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/txtSchedule"
+            app:layout_constraintStart_toEndOf="@+id/txtSchedule"
+            app:layout_constraintTop_toTopOf="@+id/txtSchedule" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTitle"
+            style="@style/AppTextView.MediumTextBody.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:singleLine="true"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvStatus"
+            app:layout_constraintStart_toStartOf="@+id/guideline18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ibActive"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="@null"
+            android:tint="@color/green"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCategoryType"
+            app:layout_constraintEnd_toStartOf="@+id/ibLike"
+            app:layout_constraintTop_toTopOf="@+id/txtTitle"
+            app:srcCompat="@drawable/ic_checkbox_on_background" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ibLike"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@null"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCategoryType"
+            app:layout_constraintEnd_toStartOf="@+id/ivUserMoreAction"
+            app:layout_constraintTop_toTopOf="@+id/txtTitle"
+            app:srcCompat="@drawable/ic_heart" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ivUserMoreAction"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@null"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_more_new" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/circularProgressView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/colorAccent"
+            app:indicatorSize="36dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rivProfile"
+            app:layout_constraintEnd_toEndOf="@+id/rivProfile"
+            app:layout_constraintStart_toStartOf="@+id/rivProfile"
+            app:layout_constraintTop_toTopOf="@+id/rivProfile"
+            app:trackColor="@color/color_transparent"
+            app:trackCornerRadius="2.5dp"
+            app:trackThickness="5dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

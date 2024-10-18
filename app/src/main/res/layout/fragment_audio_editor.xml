@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView2"
+            style="@style/AppTextView.MediumTextBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Move start and end to trim the audio. To Proceed, Audio should be below 3 Minutes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtStartTime"
+            style="@style/AppTextView.MediumTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="--:--"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/txtTrimmedTime"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtStart"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Start"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="@+id/txtStartTime"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/txtStartTime"
+            app:layout_constraintTop_toBottomOf="@+id/txtStartTime" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTrimmedTime"
+            style="@style/AppTextView.MediumTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="--:--"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/txtEndTime"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toEndOf="@+id/txtStartTime"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtTrimmed"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Trimmed \nLength"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="@+id/txtTrimmedTime"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/txtTrimmedTime"
+            app:layout_constraintTop_toBottomOf="@+id/txtTrimmedTime" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtEndTime"
+            style="@style/AppTextView.MediumTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="--:--"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtTrimmedTime"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView2" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtEnd"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="End"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="@+id/txtEndTime"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/txtEndTime"
+            app:layout_constraintTop_toBottomOf="@+id/txtEndTime" />
+
+
+        <com.onourem.android.activity.ui.utils.range_seekbar.RangeSeekBar
+            android:id="@+id/rangeSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTrimmed" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rangeSeekBar">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAudioFromStorage"
+                style="@style/AppButton.GrayButton.Outline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Continue"
+                android:textColor="@color/color_dark_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.9"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.5" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/play"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:scaleType="fitXY"
+                android:tintMode="src_atop"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/btnAudioFromStorage"
+                app:layout_constraintEnd_toStartOf="@+id/ibDelete"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_recording_play" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ibDelete"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="8dp"
+                android:scaleType="fitXY"
+                android:tintMode="src_atop"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/btnAudioFromStorage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/play"
+                app:srcCompat="@drawable/ic_recording_trash" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

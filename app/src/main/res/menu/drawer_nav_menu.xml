@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/menu_profile" />
+
+        <item
+            android:id="@+id/nav_dashboard_new"
+            android:icon="@drawable/ic_mood"
+            android:title="@string/menu_dashboard" />
+
+        <item
+            android:id="@+id/nav_friends_circle_main"
+            android:icon="@drawable/ic_game_icon"
+            android:title="@string/menu_fc" />
+
+        <item
+            android:id="@+id/nav_appreciate_dialog"
+            android:icon="@drawable/ic_heart_drawer"
+            android:title="@string/label_appreciate" />
+        <item
+            android:id="@+id/nav_create_own_question"
+            android:icon="@drawable/ic_edit"
+            android:title="@string/label_question_create" />
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_friends"
+            android:title="@string/menu_friends" />
+
+        <item
+            android:id="@+id/nav_privacy_groups"
+            android:icon="@drawable/ic_groups"
+            android:title="@string/menu_privacy_groups" />
+
+        <item
+            android:id="@+id/nav_question_games"
+            android:icon="@drawable/ic_oclubs"
+            android:title="@string/menu_oclubs_groups" />
+
+        <item
+            android:id="@+id/nav_invite_friends"
+            android:icon="@drawable/ic_invite_friends"
+            android:title="@string/menu_invite_friends" />
+
+<!--        <item-->
+<!--            android:id="@+id/nav_ambassador"-->
+<!--            android:icon="@drawable/ic_invite_friends"-->
+<!--            android:title="@string/menu_apply_ambassador" />-->
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/menu_settings" />
+
+        <item
+            android:id="@+id/nav_subscription"
+            android:icon="@drawable/ic_subscription"
+            android:title="@string/menu_subscription" />
+
+        <item
+            android:id="@+id/nav_report_problem"
+            android:icon="@drawable/ic_report_problem"
+            android:title="@string/menu_report_problem" />
+
+        <item
+            android:id="@+id/nav_contact_us"
+            android:icon="@drawable/ic_contact_us"
+            android:title="@string/menu_contact_us" />
+
+        <item
+            android:id="@+id/nav_onourem_intro"
+            android:icon="@drawable/ic_intro"
+            android:title="@string/menu_onourem_intro" />
+
+        <item
+            android:id="@+id/nav_review_onourem"
+            android:icon="@drawable/ic_review_us"
+            android:title="@string/menu_review_onourem" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/menu_logout" />
+
+
+        <!--        <item android:title="Theme">-->
+        <!--            <menu>-->
+        <!--                <item-->
+        <!--                    android:id="@+id/nav_switch_yellow"-->
+        <!--                    android:icon="@drawable/ic_settings"-->
+        <!--                    android:title="Yellow Theme"/>-->
+        <!--            </menu>-->
+        <!--        </item>-->
+
+    </group>
+
+
+</menu>

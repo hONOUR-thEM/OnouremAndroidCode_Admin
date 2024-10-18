@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline16"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCall"
+                style="@style/AppButton.OrangeButton.Outline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Call"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_call"
+                app:iconGravity="start"
+                app:iconPadding="8dp"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnEmail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnEmail"
+                app:layout_constraintTop_toTopOf="@+id/btnEmail" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEmail"
+                style="@style/AppButton.OrangeButton.Outline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="Email"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_email_new"
+                app:iconGravity="start"
+                app:iconPadding="8dp"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/btnCall"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/frame"
+                app:layout_constraintTop_toBottomOf="@+id/frame" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/frame"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cvProfileImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_optimizationLevel="cache_measures">
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Professor Santanu Misra"
+                    android:textColor="@color/color_black"
+                    android:textSize="16dp"
+                    app:fontFamily="@font/montserrat_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Head, Institute Counselling Service (ICS), IIT Kanpur"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/montserrat_semibold"
+                    app:layout_constraintEnd_toEndOf="@+id/tvName"
+                    app:layout_constraintStart_toStartOf="@+id/tvName"
+                    app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+                <!--                <com.google.android.material.textview.MaterialTextView-->
+                <!--                    android:id="@+id/tvPhn"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="6dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="Phone: +91-7080104780 (Mobile/WhatsApp)"-->
+                <!--                    android:textColor="@color/color_gray_cross"-->
+                <!--                    app:fontFamily="@font/montserrat_medium"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/tvLocation"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/tvLocation"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/tvLocation" />-->
+
+                <!--                <com.google.android.material.textview.MaterialTextView-->
+                <!--                    android:id="@+id/tvEmail"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="6dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="E-mail : head_cs@iitk.ac.in"-->
+                <!--                    android:textColor="@color/color_gray_cross"-->
+                <!--                    app:fontFamily="@font/montserrat_medium"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/tvPhn"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/tvPhn"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/tvPhn" />-->
+
+                <!--                <com.google.android.material.textview.MaterialTextView-->
+                <!--                    android:id="@+id/tvOffice"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="6dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="Office: 201, Old SAC Building, \nIIT Kanpur"-->
+                <!--                    android:textColor="@color/color_gray_cross"-->
+                <!--                    app:fontFamily="@font/montserrat_medium"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/tvEmail"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/tvEmail"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/tvEmail" />-->
+
+                <!--                <com.google.android.material.textview.MaterialTextView-->
+                <!--                    android:id="@+id/tvLink"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="6dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:text="Link : https://www.iitk.ac.in/"-->
+                <!--                    android:textColor="@color/color_blue"-->
+                <!--                    app:fontFamily="@font/montserrat_medium"-->
+                <!--                    app:layout_constraintEnd_toEndOf="@+id/tvOffice"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/tvOffice"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/tvOffice" />-->
+
+                <!--                        <com.google.android.material.textview.MaterialTextView-->
+                <!--                            android:id="@+id/tvAnswerCount"-->
+                <!--                            style="@style/AppTextView.ExtraSmallTextBody.Bold"-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="0dp"-->
+                <!--                            android:layout_marginStart="8dp"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:background="@drawable/ic_circle"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:padding="8dp"-->
+                <!--                            android:text="0\nAnswers"-->
+                <!--                            android:textColor="@color/black"-->
+                <!--                            app:cardCornerRadius="30dp"-->
+                <!--                            app:cardPreventCornerOverlap="true"-->
+                <!--                            app:layout_constraintBottom_toBottomOf="@+id/tvFriendCount"-->
+                <!--                            app:layout_constraintDimensionRatio="1:1"-->
+                <!--                            app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                            app:layout_constraintHorizontal_bias="0.5"-->
+                <!--                            app:layout_constraintStart_toEndOf="@+id/tvFriendCount"-->
+                <!--                            app:layout_constraintTop_toBottomOf="@+id/tvIsFriend" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvProfileImage"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="h,1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivProfileImage"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    app:riv_border_color="@color/gray_color"
+                    app:riv_border_width="1dp"
+                    app:riv_corner_radius="50dp"
+                    app:riv_mutate_background="true"
+                    app:riv_oval="true"
+                    app:srcCompat="@drawable/default_user_profile_image" />
+
+            </com.google.android.material.card.MaterialCardView>
+            <!--https://www.iitk.ac.in/counsel/assets/img/team/Santanusir_Head.jpg-->
+            <!--https://www.iitk.ac.in/counsel/assets/img/brand/white.png-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>

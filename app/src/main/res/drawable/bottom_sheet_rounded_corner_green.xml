@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?><!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    <item>-->
+<!--        <shape>-->
+<!--            <padding android:top="5dp" />-->
+<!--            <solid-->
+<!--                android:width="1dp"-->
+<!--                android:color="@color/color_transparent" />-->
+<!--            <corners-->
+<!--                android:topLeftRadius="15dp"-->
+<!--                android:topRightRadius="15dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item>-->
+<!--        <shape>-->
+<!--            <padding android:top="1dp" />-->
+<!--            <stroke-->
+<!--                android:width="1dp"-->
+<!--                android:color="#05000000" />-->
+<!--            <corners-->
+<!--                android:topLeftRadius="14dp"-->
+<!--                android:topRightRadius="14dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item>-->
+<!--        <shape>-->
+<!--            <padding android:top="1dp" />-->
+<!--            <stroke-->
+<!--                android:width="1dp"-->
+<!--                android:color="#15000000" />-->
+<!--            <corners-->
+<!--                android:topLeftRadius="13dp"-->
+<!--                android:topRightRadius="13dp" />-->
+<!--            &lt;!&ndash;&ndash;&gt;-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item>-->
+<!--        <shape>-->
+<!--            <padding android:top="1dp" />-->
+<!--            <stroke-->
+<!--                android:width="1dp"-->
+<!--                android:color="#15000000" />-->
+<!--            <corners-->
+<!--                android:topLeftRadius="12dp"-->
+<!--                android:topRightRadius="12dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    <item>-->
+<!--        <shape>-->
+<!--            <padding android:top="1dp" />-->
+<!--            <stroke-->
+<!--                android:width="1dp"-->
+<!--                android:color="#20000000" />-->
+<!--            <corners-->
+<!--                android:topLeftRadius="11dp"-->
+<!--                android:topRightRadius="11dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--    &lt;!&ndash;&ndash;&gt;-->
+<!--    &lt;!&ndash; Background &ndash;&gt;-->
+<!--    <item>-->
+<!--        <shape>-->
+<!--            <solid android:color="#FFFFFF" />-->
+<!--            <corners-->
+<!--                android:topLeftRadius="11dp"-->
+<!--                android:topRightRadius="11dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+<!--</layer-list>-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners
+        android:topLeftRadius="16dp"
+        android:topRightRadius="16dp" />
+    <padding android:top="8dp" />
+    <solid android:color="@color/good_green_color" />
+</shape>

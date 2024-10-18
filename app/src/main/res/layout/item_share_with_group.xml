@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:paddingStart="8dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_optimizationLevel="cache_measures">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        style="@style/AppTextView.SmallTextBody.Bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:singleLine="true"
+        android:text="@string/label_solo_games"
+        app:layout_constraintBottom_toBottomOf="@+id/groupIcon"
+        app:layout_constraintEnd_toStartOf="@+id/ivCheck"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/groupIcon"
+        app:layout_constraintTop_toTopOf="@+id/groupIcon"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/groupIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_groups" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivIconVerified"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/ic_verified"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/groupIcon"
+        app:layout_constraintEnd_toEndOf="@+id/groupIcon"
+        app:layout_constraintStart_toEndOf="@+id/groupIcon"
+        app:layout_constraintTop_toTopOf="@+id/groupIcon"
+        tools:visibility="visible" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintDimensionRatio="H, 1:0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle"
+        app:srcCompat="@drawable/ic_checkbox_on_background" />
+</androidx.constraintlayout.widget.ConstraintLayout>

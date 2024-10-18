@@ -1,0 +1,2180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_admin_menu">
+
+    <!--Admin Start-->
+
+    <dialog
+        android:id="@+id/nav_admin_appreciate_dialog"
+        android:name="com.onourem.android.activity.ui.admin.create.task.AdminAppreciateDialogFragment"
+        tools:layout="@layout/dialog_appreciate">
+
+        <argument
+            android:name="formattedDateTime"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_nav_admin_appreciate_dialog_to_nav_compose_message_dialog"
+            app:destination="@id/nav_admin_compose_message_dialog"
+            app:popUpTo="@id/nav_admin_appreciate_dialog"
+            app:popUpToInclusive="true" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/nav_admin_picker_bottomsheet_dialog_fragment"
+        android:name="com.onourem.android.activity.ui.admin.bottomsheets.AdminPickerBottomSheetDialogFragment"
+        tools:layout="@layout/dialog_bottom_sheet">
+        <argument
+            android:name="isVideoAllowed"
+            app:argType="boolean" />
+    </dialog>
+
+    <action
+        android:id="@+id/action_global_nav_admin_picker_bottomsheet_dialog_fragment"
+        app:destination="@id/nav_admin_picker_bottomsheet_dialog_fragment" />
+
+
+    <dialog
+        android:id="@+id/nav_admin_compose_message_dialog"
+        android:name="com.onourem.android.activity.ui.admin.create.task.AdminAppreciateMessageComposeDialogFragment"
+        tools:layout="@layout/dialog_compose_message">
+        <action
+            android:id="@+id/action_nav_admin_compose_message_dialog_to_nav_admin_appreciate_dialog"
+            app:destination="@id/nav_admin_appreciate_dialog" />
+
+
+        <argument
+            android:name="showDescription"
+            app:argType="boolean" />
+
+        <argument
+            android:name="item"
+            app:argType="com.onourem.android.activity.models.LoginDayActivityInfoList"
+            app:nullable="true" />
+
+        <argument
+            android:name="formattedDateTime"
+            app:argType="string" />
+
+    </dialog>
+
+    <dialog
+        android:id="@+id/nav_admin_search_vocal"
+        android:name="com.onourem.android.activity.ui.admin.vocals.playback.AdminSearchVocalFragment" />
+
+    <fragment
+        android:id="@+id/nav_create_activities_main"
+        android:name="com.onourem.android.activity.ui.admin.create.CreateActivitiesFragment">
+        <argument
+            android:name="position"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_create_activities_main_to_nav_admin_create_own_question"
+            app:destination="@id/nav_admin_create_own_question" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_nav_create_activities_main"
+        app:destination="@id/nav_create_activities_main" />
+
+    <fragment
+        android:id="@+id/nav_all_activities"
+        android:name="com.onourem.android.activity.ui.admin.oclub_auto_trigger.AllActivitiesFragment"
+        android:label="All Activities">
+        <argument
+            android:name="position"
+            app:argType="string" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_nav_all_activities"
+        app:destination="@id/nav_all_activities" />
+
+    <dialog
+        android:id="@+id/nav_trigger_activities_in_oclub"
+        android:name="com.onourem.android.activity.ui.admin.oclub_auto_trigger.TriggerActivitiesInOclubFragment">
+        <argument
+            android:name="activityId"
+            app:argType="string" />
+
+        <argument
+            android:name="activityText"
+            app:argType="string" />
+
+        <argument
+            android:name="activityType"
+            app:argType="string" />
+    </dialog>
+
+
+    <dialog
+        android:id="@+id/nav_inactive_activity"
+        android:name="com.onourem.android.activity.ui.admin.details.InactiveActivityFragment">
+        <argument
+            android:name="activityId"
+            app:argType="string" />
+
+        <argument
+            android:name="activityText"
+            app:argType="string" />
+
+        <argument
+            android:name="activityType"
+            app:argType="string" />
+    </dialog>
+
+    <action
+        android:id="@+id/action_global_nav_trigger_activities_in_oclub"
+        app:destination="@id/nav_trigger_activities_in_oclub" />
+
+    <action
+        android:id="@+id/action_global_nav_inactive_activity"
+        app:destination="@id/nav_inactive_activity" />
+
+    <action
+        android:id="@+id/action_global_nav_admin_search_vocal"
+        app:destination="@id/nav_admin_search_vocal" />
+
+
+    <dialog
+        android:id="@+id/nav_rating_bar"
+        android:name="com.onourem.android.activity.ui.admin.vocals.RatingFragment">
+        <argument
+            android:name="song"
+            app:argType="com.onourem.android.activity.ui.audio.playback.Song" />
+        <argument
+            android:name="fromAction"
+            app:argType="string" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_rating_bar"
+        app:destination="@id/nav_rating_bar" />
+
+    <fragment
+        android:id="@+id/nav_schedule_future_questions"
+        android:name="com.onourem.android.activity.ui.admin.create.question_schedule.ScheduleFutureQuestionsFragment"
+        android:label="Activities List" />
+    <action
+        android:id="@+id/action_global_nav_schedule_future_questions"
+        app:destination="@id/nav_schedule_future_questions" />
+
+
+    <fragment
+        android:id="@+id/nav_scheduled_activities"
+        android:name="com.onourem.android.activity.ui.admin.main.ScheduledActivitiesFragment"
+        android:label="Scheduled Activities" />
+    <action
+        android:id="@+id/action_global_nav_scheduled_activities"
+        app:destination="@id/nav_scheduled_activities" />
+
+    <fragment
+        android:id="@+id/nav_schedule_question"
+        android:name="com.onourem.android.activity.ui.admin.create.question_schedule.ScheduleOnouremActivityFragment"
+        tools:layout="@layout/bottom_sheet_schedule_question">
+        <action
+            android:id="@+id/action_nav_schedule_question_to_nav_admin_create_own_question"
+            app:destination="@id/nav_admin_create_own_question" />
+
+        <action
+            android:id="@+id/action_nav_schedule_question_to_nav_admin_create_task"
+            app:destination="@id/nav_admin_create_task" />
+
+        <argument
+            android:name="formattedDateTime"
+            app:argType="string" />
+
+        <argument
+            android:name="activityType"
+            app:argType="string" />
+
+        <argument
+            android:name="activityId"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_admin_vocals"
+        android:name="com.onourem.android.activity.ui.admin.vocals.AdminVocalsFragment"
+        android:label="Onourem Audio Shorts">
+        <action
+            android:id="@+id/action_nav_admin_vocals_to_nav_audio_category"
+            app:destination="@id/nav_audio_category" />
+        <action
+            android:id="@+id/action_nav_admin_vocals_to_nav_admin_search_vocal"
+            app:destination="@id/nav_admin_search_vocal" />
+        <argument
+            android:name="vocalUserId"
+            app:argType="string" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="linkUserId"
+            app:argType="string" />
+        <argument
+            android:name="audioIdFromNotification"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_schedule_vocals"
+        android:name="com.onourem.android.activity.ui.admin.vocals.ScheduleVocalsFragment"
+        android:label="Schedule Vocals">
+        <action
+            android:id="@+id/action_nav_schedule_vocals_to_nav_audio_category"
+            app:destination="@id/nav_audio_category" />
+        <action
+            android:id="@+id/action_nav_schedule_vocals_to_nav_admin_search_vocal"
+            app:destination="@id/nav_admin_search_vocal" />
+        <argument
+            android:name="vocalUserId"
+            app:argType="string" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="linkUserId"
+            app:argType="string" />
+        <argument
+            android:name="audioIdFromNotification"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_admin_vocals"
+        app:destination="@id/nav_admin_vocals" />
+
+    <dialog
+        android:id="@+id/nav_admin_create_own_question"
+        android:name="com.onourem.android.activity.ui.admin.create.question_schedule.AdminCreateOwnQuestionDialogFragment"
+        android:label=""
+        tools:layout="@layout/dialog_create_own_question">
+
+        <argument
+            android:name="selectedGroup"
+            app:argType="com.onourem.android.activity.models.PlayGroup" />
+        <argument
+            android:name="futureQuestionDetails"
+            app:argType="com.onourem.android.activity.models.FutureQuestionDetails"
+            app:nullable="true" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/nav_activity_updates"
+        android:name="com.onourem.android.activity.ui.admin.activity_updates.ActivityUpdatesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_activity_updates_main" />
+
+    <dialog
+        android:id="@+id/nav_admin_create_task"
+        android:name="com.onourem.android.activity.ui.admin.create.question_schedule.AdminCreateTaskDialogFragment"
+        android:label=""
+        tools:layout="@layout/dialog_admin_create_task">
+
+        <argument
+            android:name="selectedGroup"
+            app:argType="com.onourem.android.activity.models.PlayGroup" />
+        <argument
+            android:name="futureQuestionDetails"
+            app:argType="com.onourem.android.activity.models.FutureQuestionDetails"
+            app:nullable="true" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/nav_add_survey"
+        android:name="com.onourem.android.activity.ui.admin.create.surveys.AddSurveyFragment"
+        android:label="Add Survey">
+
+        <argument
+            android:name="formattedDateTime"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_add_survey"
+        app:destination="@id/nav_add_survey" />
+    <fragment
+        android:id="@+id/nav_email"
+        android:name="com.onourem.android.activity.ui.admin.main.email.EmailFragment"
+        android:label="Send Email " />
+    <action
+        android:id="@+id/action_global_nav_email"
+        app:destination="@id/nav_email" />
+    <fragment
+        android:id="@+id/nav_external_content"
+        android:name="com.onourem.android.activity.ui.admin.create.external_posts.ExternalContentFragment"
+        android:label="External Content">
+        <argument
+            android:name="formattedDateTime"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_external_content"
+        app:destination="@id/nav_external_content" />
+    <fragment
+        android:id="@+id/nav_admin_menu"
+        android:name="com.onourem.android.activity.ui.admin.admin_menu.AdminMenuDialogFragment"
+        android:label="Admin Options" />
+    <action
+        android:id="@+id/action_global_nav_admin_menu"
+        app:destination="@id/nav_admin_menu" />
+    <fragment
+        android:id="@+id/nav_external_posts"
+        android:name="com.onourem.android.activity.ui.admin.create.external_posts.ScheduleFutureExternalPostsFragment"
+        android:label="External Posts ">
+
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_external_posts"
+        app:destination="@id/nav_external_posts" />
+    <fragment
+        android:id="@+id/nav_update_external_content"
+        android:name="com.onourem.android.activity.ui.admin.create.external_posts.UpdateExternalContentFragment"
+        android:label="Update Post">
+        <argument
+            android:name="externalContent"
+            app:argType="com.onourem.android.activity.ui.admin.create.external_posts.ExternalActivityData" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_update_external_content"
+        app:destination="@id/nav_update_external_content" />
+
+
+    <fragment
+        android:id="@+id/nav_public_post"
+        android:name="com.onourem.android.activity.ui.admin.posts.PostViewPagerFragment"
+        android:label="Public Posts" />
+    <action
+        android:id="@+id/action_global_nav_public_post"
+        app:destination="@id/nav_public_post" />
+    <fragment
+        android:id="@+id/nav_delete_user"
+        android:name="com.onourem.android.activity.ui.admin.main.delete.DeleteUserAccountFragment"
+        android:label="Delete User Account" />
+    <action
+        android:id="@+id/action_global_nav_delete_user"
+        app:destination="@id/nav_delete_user" />
+
+    <fragment
+        android:id="@+id/nav_add_subscription"
+        android:name="com.onourem.android.activity.ui.admin.main.subscriptions.AddSubscriptionFragment"
+        android:label="Add Subscription"
+        tools:layout="@layout/fragment_add_subscription" />
+    <action
+        android:id="@+id/action_global_nav_add_subscription"
+        app:destination="@id/nav_add_subscription" />
+
+
+    <fragment
+        android:id="@+id/nav_add_subscription_discount"
+        android:name="com.onourem.android.activity.ui.admin.main.subscriptions.AddSubscriptionDiscountFragment"
+        android:label="Add Subscription Discount"
+        tools:layout="@layout/fragment_add_subscription_discount" />
+    <action
+        android:id="@+id/action_global_nav_add_subscription_discount"
+        app:destination="@id/nav_add_subscription_discount" />
+
+    <fragment
+        android:id="@+id/nav_add_institute"
+        android:name="com.onourem.android.activity.ui.admin.main.subscriptions.AddInstitutionFragment"
+        android:label="Add Institution"
+        tools:layout="@layout/fragment_add_institute" />
+
+    <fragment
+        android:id="@+id/nav_add_random_numbers"
+        android:name="com.onourem.android.activity.ui.admin.random.GenerateRandomNumbersFragment"
+        android:label="Generate Numbers"
+        tools:layout="@layout/fragment_generate_random_numbers" />
+    <action
+        android:id="@+id/action_global_nav_add_institute"
+        app:destination="@id/nav_add_institute" />
+
+    <action
+        android:id="@+id/action_global_nav_add_random_numbers"
+        app:destination="@id/nav_add_random_numbers" />
+
+
+    <fragment
+        android:id="@+id/nav_payment_status_by_order_id"
+        android:name="com.onourem.android.activity.ui.admin.main.subscriptions.PaymentStatusByOrderIdFragment"
+        android:label="Payment Details" />
+    <action
+        android:id="@+id/action_global_nav_payment_status_by_order_id"
+        app:destination="@id/nav_payment_status_by_order_id" />
+
+
+    <fragment
+        android:id="@+id/nav_activity_details"
+        android:name="com.onourem.android.activity.ui.admin.details.ActivityDetailsFragment"
+        android:label="Activity Info" />
+    <action
+        android:id="@+id/action_global_nav_activity_details"
+        app:destination="@id/nav_activity_details" />
+
+    <action
+        android:id="@+id/action_global_nav_admin_create_task"
+        app:destination="@id/nav_admin_create_task" />
+    <fragment
+        android:id="@+id/nav_tasks"
+        android:name="com.onourem.android.activity.ui.admin.create.task.ScheduleFutureTaskFragment"
+        android:label="Tasks / Message List" />
+    <action
+        android:id="@+id/action_global_nav_tasks"
+        app:destination="@id/nav_tasks" />
+    <action
+        android:id="@+id/action_global_nav_admin_appreciate_dialog"
+        app:destination="@id/nav_admin_appreciate_dialog" />
+    <action
+        android:id="@+id/action_global_nav_schedule_question"
+        app:destination="@id/nav_schedule_question" />
+    <action
+        android:id="@+id/action_global_nav_admin_create_own_question"
+        app:destination="@id/nav_admin_create_own_question" />
+
+
+    <action
+        android:id="@+id/action_global_nav_activity_updates"
+        app:destination="@id/nav_activity_updates" />
+
+    <fragment
+        android:id="@+id/nav_oclub_settings"
+        android:name="com.onourem.android.activity.ui.admin.main.subscriptions.OClubSettingsFragment"
+        android:label="Oclub Settings" />
+
+    <fragment
+        android:id="@+id/nav_user_report"
+        android:name="com.onourem.android.activity.ui.admin.main.other.UserReportsFragment"
+        android:label="Inappropriate Reports" />
+
+    <fragment
+        android:id="@+id/nav_user_query"
+        android:name="com.onourem.android.activity.ui.admin.main.other.UserQueryFragment"
+        android:label="Contact Us" />
+
+    <dialog
+        android:id="@+id/nav_reply_query"
+        android:name="com.onourem.android.activity.ui.admin.main.other.CreateReplyDialogFragment"
+        android:label="">
+
+        <action
+            android:id="@+id/action_nav_reply_query_to_nav_conversation_details"
+            app:destination="@id/nav_conversation_details" />
+    </dialog>
+
+
+    <action
+        android:id="@+id/action_global_nav_oclub_settings"
+        app:destination="@id/nav_oclub_settings" />
+
+    <action
+        android:id="@+id/action_global_nav_user_report"
+        app:destination="@id/nav_user_report" />
+
+    <action
+        android:id="@+id/action_global_nav_user_query"
+        app:destination="@id/nav_user_query" />
+
+    <action
+        android:id="@+id/action_global_nav_reply_query"
+        app:destination="@id/nav_reply_query" />
+
+    <fragment
+        android:id="@+id/nav_update_mood_info"
+        android:name="com.onourem.android.activity.ui.admin.main.mood.UpdateMoodInfoFragment"
+        android:label="Mood Update">
+
+        <argument
+            android:name="moodInfo"
+            app:argType="com.onourem.android.activity.models.MoodInfoData"
+            app:nullable="true" />
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_nav_update_mood_info"
+        app:destination="@id/nav_update_mood_info" />
+
+    <fragment
+        android:id="@+id/nav_mood_info_list"
+        android:name="com.onourem.android.activity.ui.admin.main.mood.MoodInfoListFragment"
+        android:label="Mood List" />
+
+    <action
+        android:id="@+id/action_global_nav_mood_info_list"
+        app:destination="@id/nav_mood_info_list" />
+
+    <fragment
+        android:id="@+id/nav_app_review_list"
+        android:name="com.onourem.android.activity.ui.admin.main.other.AppReviewsListFragment"
+        android:label="App Reviews" />
+
+    <action
+        android:id="@+id/action_global_nav_app_review_list"
+        app:destination="@id/nav_app_review_list" />
+
+
+    <fragment
+        android:id="@+id/nav_portal_user_create"
+        android:name="com.onourem.android.activity.ui.admin.main.portal.PortalSignUpFragment"
+        android:label="Create User" />
+
+    <action
+        android:id="@+id/action_global_nav_portal_user_create"
+        app:destination="@id/nav_portal_user_create" />
+
+    <fragment
+        android:id="@+id/nav_portal_users"
+        android:name="com.onourem.android.activity.ui.admin.main.portal.PortalUsersFragment"
+        android:label="Portal Users" />
+
+    <action
+        android:id="@+id/action_global_nav_portal_users"
+        app:destination="@id/nav_portal_users" />
+
+    <fragment
+        android:id="@+id/nav_auto_triggered_activities"
+        android:name="com.onourem.android.activity.ui.admin.details.AutoTriggeredOclubActivitiesFragment"
+        android:label="OClub Activities" />
+
+    <action
+        android:id="@+id/action_global_nav_auto_triggered_activities"
+        app:destination="@id/nav_auto_triggered_activities" />
+
+    <fragment
+        android:id="@+id/nav_packages_info"
+        android:name="com.onourem.android.activity.ui.admin.main.subscriptions.PackagesFragment"
+        android:label="Packages Info" />
+
+    <action
+        android:id="@+id/action_global_nav_packages_info"
+        app:destination="@id/nav_packages_info" />
+
+    <fragment
+        android:id="@+id/nav_institute_info"
+        android:name="com.onourem.android.activity.ui.admin.main.subscriptions.InstituteFragment"
+        android:label="Institutes Info" />
+    <action
+        android:id="@+id/action_global_nav_institute_info"
+        app:destination="@id/nav_institute_info" />
+
+
+    <!--Admin End-->
+
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.onourem.android.activity.ui.dashboard.DashboardFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_play_games">
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_anonymous_survey"
+            app:destination="@id/nav_anonymous_survey" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_statistics_survey"
+            app:destination="@id/nav_statistics_survey"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_all_surveys"
+            app:destination="@id/nav_all_surveys" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_question_games"
+            app:destination="@id/nav_question_games" />
+        <action
+            android:id="@+id/action_nav_home_to_watchListDialogFragment"
+            app:destination="@id/nav_watch_list" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_play_games"
+            app:destination="@id/nav_play_games" />
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_play_group_member"
+            app:destination="@id/nav_play_group_member" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_bootom_sheet"
+            app:destination="@id/nav_bootom_sheet" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_create_own_question"
+            app:destination="@id/nav_create_own_question" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_search_question"
+            app:destination="@id/nav_search_question" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_edit_question"
+            app:destination="@id/nav_edit_question" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_dashboard_new"
+            app:destination="@id/nav_dashboard_new" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_edit_add_watch_list"
+            app:destination="@id/nav_edit_add_watch_list" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_contact_us"
+        android:name="com.onourem.android.activity.ui.contactus.ContactUsFragment"
+        android:label="@string/menu_contact_us"
+        tools:layout="@layout/fragment_contact_us">
+        <argument
+            android:name="actionToPerform"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_report_problem"
+        android:name="com.onourem.android.activity.ui.contactus.ContactUsFragment"
+        android:label="@string/menu_report_problem"
+        tools:layout="@layout/fragment_contact_us">
+        <argument
+            android:name="actionToPerform"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.onourem.android.activity.ui.settings.fragments.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_nav_settings_to_nav_web_content"
+            app:destination="@id/nav_web_content" />
+        <action
+            android:id="@+id/action_nav_settings_to_nav_profile_settings"
+            app:destination="@id/nav_profile_settings" />
+        <action
+            android:id="@+id/action_nav_settings_to_nav_block_users_list"
+            app:destination="@id/nav_block_users_list" />
+        <action
+            android:id="@+id/action_nav_settings_to_nav_delete_account"
+            app:destination="@id/nav_delete_account" />
+        <action
+            android:id="@+id/action_nav_settings_to_nav_push_notifications_settings"
+            app:destination="@id/nav_push_notifications_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_privacy_groups"
+        android:name="com.onourem.android.activity.ui.games.fragments.PrivacyGroupsFragment"
+        android:label="@string/menu_privacy_groups"
+        tools:layout="@layout/fragment_privacy_groups">
+        <action
+            android:id="@+id/action_nav_privacy_groups_to_nav_bootom_sheet"
+            app:destination="@id/nav_bootom_sheet" />
+        <action
+            android:id="@+id/action_nav_privacy_groups_to_nav_privacy_group_member"
+            app:destination="@id/nav_privacy_group_member" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_review_onourem"
+        android:name="com.onourem.android.activity.ui.reviewus.ReviewUsFragment"
+        android:label="@string/menu_review_onourem"
+        tools:layout="@layout/fragment_review_us" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.onourem.android.activity.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="activityId"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="profileId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_profile_image_editor"
+            app:destination="@id/nav_profile_image_editor" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_profile_settings"
+            app:destination="@id/nav_profile_settings" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_f_of_f_search"
+            app:destination="@id/nav_f_of_f_search" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_conversation_details"
+            app:destination="@id/nav_conversation_details" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_my_question_played"
+            app:destination="@id/nav_my_question_played" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_my_questions"
+            app:destination="@id/nav_my_questions" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.onourem.android.activity.ui.notifications.NotificationsFragment"
+        android:label="@string/menu_notifications"
+        tools:layout="@layout/fragment_notifications">
+        <action
+            android:id="@+id/action_nav_notifications_to_nav_notifications_message_details"
+            app:destination="@id/nav_notifications_message_details"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_nav_notifications_to_nav_play_games"
+            app:destination="@id/nav_play_games" />
+        <action
+            android:id="@+id/action_nav_notifications_to_nav_watch_list"
+            app:destination="@id/nav_watch_list" />
+        <action
+            android:id="@+id/action_nav_notifications_to_nav_question_games"
+            app:destination="@id/nav_question_games" />
+        <action
+            android:id="@+id/action_nav_notifications_to_nav_notification_external_post_details_fragment"
+            app:destination="@id/nav_notification_external_post_details_fragment" />
+        <action
+            android:id="@+id/action_nav_notifications_to_nav_anonymous_survey"
+            app:destination="@id/nav_anonymous_survey" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_all_surveys"
+        android:name="com.onourem.android.activity.ui.survey.fragments.AllSurveysFragment"
+        android:label="@string/menu_all_servey"
+        tools:layout="@layout/fragment_all_surveys">
+        <action
+            android:id="@+id/action_nav_all_surveys_to_nav_anonymous_survey"
+            app:destination="@id/nav_anonymous_survey" />
+        <action
+            android:id="@+id/action_nav_all_surveys_to_nav_statistics_survey"
+            app:destination="@id/nav_statistics_survey" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_statistics_survey"
+        android:name="com.onourem.android.activity.ui.survey.fragments.StatisticsSurveyFragment"
+        android:label="@string/menu_statistics"
+        tools:layout="@layout/fragment_statistic_survey">
+        <action
+            android:id="@+id/action_statisticsSurveyFragment_to_allSurveysFragment"
+            app:destination="@id/nav_all_surveys"
+            app:launchSingleTop="true" />
+        <argument
+            android:name="survey"
+            app:argType="com.onourem.android.activity.models.SurveyCOList" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_guest_statistics_survey"
+        android:name="com.onourem.android.activity.ui.dashboard.guest.GuestStatisticsSurveyFragment"
+        android:label="@string/menu_statistics"
+        tools:layout="@layout/fragment_statistic_survey">
+        <argument
+            android:name="survey"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_anonymous_survey"
+        android:name="com.onourem.android.activity.ui.survey.fragments.AnonymousSurveyFragment"
+        android:label="@string/menu_anonymous_survey"
+        tools:layout="@layout/fragment_anonymous_survey">
+        <action
+            android:id="@+id/action_anonymousSurveyFragment_to_statisticsSurveyFragment"
+            app:destination="@id/nav_statistics_survey"
+            app:launchSingleTop="true" />
+        <argument
+            android:name="surveyId"
+            app:argType="string" />
+        <!--        <argument-->
+        <!--            android:name="surveyFrom"-->
+        <!--            app:argType="string" />-->
+        <!--        <argument-->
+        <!--            android:name="showStats"-->
+        <!--            app:argType="string" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/nav_friends"
+        android:name="com.onourem.android.activity.ui.friends.FriendsFragment"
+        android:label="@string/menu_friends"
+        tools:layout="@layout/fragment_people" />
+
+    <dialog
+        android:id="@+id/nav_invite_friends"
+        android:name="com.onourem.android.activity.ui.invite.InviteSheetFragment"
+        android:label=""
+        tools:layout="@layout/fragment_invite_friends" />
+
+    <dialog
+        android:id="@+id/nav_question_games"
+        android:name="com.onourem.android.activity.ui.games.fragments.QuestionGamesFragment"
+        android:label="@string/label_question_games_title"
+        tools:layout="@layout/fragment_question_games">
+        <action
+            android:id="@+id/action_nav_question_games_to_nav_bootom_sheet"
+            app:destination="@id/nav_bootom_sheet" />
+        <action
+            android:id="@+id/action_nav_question_games_to_nav_play_group_member"
+            app:destination="@id/nav_play_group_member" />
+        <action
+            android:id="@+id/action_nav_question_games_to_nav_play_games"
+            app:destination="@id/nav_play_games" />
+        <action
+            android:id="@+id/action_nav_question_games_to_playGamesOClubFragment"
+            app:destination="@id/nav_play_games_o_club" />
+        <argument
+            android:name="playGroupId"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="isFrom"
+            app:argType="string" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_bootom_sheet"
+        android:name="com.onourem.android.activity.ui.bottomsheet.ActionBottomDialogFragment"
+        tools:layout="@layout/dialog_bottom_sheet">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="actions"
+            app:argType="android.os.Bundle" />
+        <action
+            android:id="@+id/action_nav_bootom_sheet_to_nav_play_group_member"
+            app:destination="@id/nav_play_group_member"
+            app:popUpTo="@id/nav_bootom_sheet"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_bootom_sheet_to_nav_privacy_group_member"
+            app:destination="@id/nav_privacy_group_member" />
+    </dialog>
+    <fragment
+        android:id="@+id/nav_play_games"
+        android:name="com.onourem.android.activity.ui.games.fragments.PlayGamesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_play_games">
+        <argument
+            android:name="selectedGroup"
+            app:argType="com.onourem.android.activity.models.PlayGroup"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_nav_play_games_to_nav_play_group_member"
+            app:destination="@id/nav_play_group_member" />
+        <action
+            android:id="@+id/action_nav_play_games_to_nav_bootom_sheet"
+            app:destination="@id/nav_bootom_sheet" />
+        <action
+            android:id="@+id/action_nav_play_games_to_nav_create_own_question"
+            app:destination="@id/nav_create_own_question" />
+        <action
+            android:id="@+id/action_nav_play_games_to_nav_question_games"
+            app:destination="@id/nav_question_games" />
+        <action
+            android:id="@+id/action_nav_play_games_to_nav_search_question"
+            app:destination="@id/nav_search_question" />
+        <action
+            android:id="@+id/action_nav_play_games_to_nav_edit_question"
+            app:destination="@id/nav_edit_question" />
+        <argument
+            android:name="isFrom"
+            app:argType="string" />
+        <!--        <action-->
+        <!--            android:id="@+id/action_nav_play_games_to_nav_answer_question_dialog"-->
+        <!--            app:destination="@id/nav_answer_question_dialog" />-->
+        <!--        <action-->
+        <!--            android:id="@+id/action_nav_play_games_to_nav_question_details"-->
+        <!--            app:destination="@id/nav_question_details" />-->
+    </fragment>
+    <dialog
+        android:id="@+id/nav_create_own_question"
+        android:name="com.onourem.android.activity.ui.games.dialogs.CreateOwnQuestionDialogFragment"
+        android:label=""
+        tools:layout="@layout/dialog_create_own_question">
+
+        <argument
+            android:name="selectedGroup"
+            app:argType="com.onourem.android.activity.models.PlayGroup" />
+    </dialog>
+    <fragment
+        android:id="@+id/nav_play_group_member"
+        android:name="com.onourem.android.activity.ui.games.fragments.PlayGroupMemberFragment"
+        android:label="O-Club Members"
+        tools:layout="@layout/fragment_play_group_member">
+
+        <action
+            android:id="@+id/action_nav_play_group_member_to_nav_bootom_sheet"
+            app:destination="@id/nav_bootom_sheet" />
+        <action
+            android:id="@+id/action_nav_play_group_member_to_nav_add_group_member"
+            app:destination="@id/nav_add_group_member"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_privacy_group_member"
+        android:name="com.onourem.android.activity.ui.games.fragments.PrivacyGroupsMemberFragment"
+        android:label="Privacy Group Members"
+        tools:layout="@layout/fragment_play_group_member">
+        <action
+            android:id="@+id/action_nav_privacy_group_member_to_nav_bootom_sheet"
+            app:destination="@id/nav_bootom_sheet" />
+        <action
+            android:id="@+id/action_nav_privacy_group_member_to_nav_add_group_member"
+            app:destination="@id/nav_add_group_member" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_add_group_member"
+        android:name="com.onourem.android.activity.ui.games.fragments.AddGroupMemberFragment"
+        android:label="O-Club Members"
+        tools:layout="@layout/fragment_add_group_member">
+        <argument
+            android:name="screenTitle"
+            app:argType="string" />
+        <argument
+            android:name="groupMemberIds"
+            app:argType="java.util.ArrayList" />
+
+    </fragment>
+    <dialog
+        android:id="@+id/nav_watch_list"
+        android:name="com.onourem.android.activity.ui.dashboard.watchlist.WatchListDialogFragment"
+        tools:layout="@layout/dialog_watch_list">
+        <argument
+            android:name="watchList"
+            app:argType="com.onourem.android.activity.models.GetWatchListResponse" />
+        <action
+            android:id="@+id/action_nav_watch_list_to_nav_edit_add_watch_list"
+            app:destination="@id/nav_edit_add_watch_list"
+            app:popUpTo="@+id/nav_watch_list"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="from"
+            app:argType="string" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_edit_add_watch_list"
+        android:name="com.onourem.android.activity.ui.dashboard.watchlist.EditAddWatchListDialogFragment"
+        tools:layout="@layout/dialog_watch_list">
+        <argument
+            android:name="isFromAddWatchList"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_nav_edit_add_watch_list_to_nav_bootom_sheet"
+            app:destination="@id/nav_bootom_sheet" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_appreciate_dialog"
+        android:name="com.onourem.android.activity.ui.appreciation.fragments.AppreciateDialogFragment"
+        tools:layout="@layout/dialog_appreciate">
+
+        <action
+            android:id="@+id/action_nav_appreciate_dialog_to_nav_compose_message_dialog"
+            app:destination="@id/nav_compose_message_dialog"
+            app:popUpTo="@id/nav_appreciate_dialog"
+            app:popUpToInclusive="true" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/nav_picker_bottomsheet_dialog_fragment"
+        android:name="com.onourem.android.activity.ui.bottomsheet.PickerBottomSheetDialogFragment"
+        tools:layout="@layout/dialog_bottom_sheet">
+        <argument
+            android:name="isVideoAllowed"
+            app:argType="boolean" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_select_privacy"
+        android:name="com.onourem.android.activity.ui.games.fragments.SelectPrivacyDialogFragment"
+        tools:layout="@layout/dialog_select_privacy">
+        <argument
+            android:name="groupPointsMap"
+            app:argType="java.util.HashMap"
+            app:nullable="true" />
+        <argument
+            android:name="showPrivateOption"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_media_view"
+        android:name="com.onourem.android.activity.ui.dialog.MediaViewDialogFragment"
+        tools:layout="@layout/dialog_media_view">
+        <argument
+            android:name="media_type"
+            app:argType="integer" />
+        <argument
+            android:name="media_uri"
+            app:argType="string" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_compose_message_dialog"
+        android:name="com.onourem.android.activity.ui.games.fragments.AppreciateMessageComposeDialogFragment"
+        tools:layout="@layout/dialog_compose_message">
+        <action
+            android:id="@+id/action_nav_compose_message_dialog_to_nav_appreciate_dialog"
+            app:destination="@id/nav_appreciate_dialog" />
+
+        <argument
+            android:name="showDescription"
+            app:argType="boolean" />
+
+        <argument
+            android:name="item"
+            app:argType="com.onourem.android.activity.models.LoginDayActivityInfoList"
+            app:nullable="true" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_task_message_compose"
+        android:name="com.onourem.android.activity.ui.games.fragments.TaskAndMessageComposeDialogFragment"
+        android:label=""
+        tools:layout="@layout/dialog_compose_message">
+        <argument
+            android:name="question"
+            app:argType="com.onourem.android.activity.models.LoginDayActivityInfoList" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.onourem.android.activity.ui.people.PeopleSearchFragment">
+        <argument
+            android:name="shouldShowFriends"
+            app:argType="boolean" />
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <argument
+            android:name="shouldShowSearchOptions"
+            app:argType="boolean" />
+        <argument
+            android:name="friendName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="inputUserId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+    <dialog
+        android:id="@+id/nav_ask_friends_sheet"
+        android:name="com.onourem.android.activity.ui.games.fragments.AskFriendsBottomSheetFragment"
+        tools:layout="@layout/bottom_sheet_ask_friends">
+        <argument
+            android:name="question"
+            app:argType="com.onourem.android.activity.models.LoginDayActivityInfoList" />
+
+        <argument
+            android:name="isActivityForNewQuestion"
+            app:argType="boolean" />
+
+        <argument
+            android:name="playGroupId"
+            app:argType="string" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_user_action_bottom_sheet"
+        android:name="com.onourem.android.activity.ui.bottomsheet.UserActionBottomSheetDialogFragment"
+        android:label="">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="actions"
+            app:argType="android.os.Bundle" />
+        <argument
+            android:name="subTitle"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/nav_one_to_many_question_details"
+        android:name="com.onourem.android.activity.ui.games.fragments.OneToManyQuestionDetailsFragment"
+        tools:layout="@layout/fragment_one_to_many_question_details">
+        <argument
+            android:name="question"
+            app:argType="com.onourem.android.activity.models.LoginDayActivityInfoList" />
+
+        <argument
+            android:name="playGroup"
+            app:argType="com.onourem.android.activity.models.PlayGroup" />
+
+        <argument
+            android:name="gameIdToHighlight"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="gameActivityResIdToHighlight"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="isFromQuestionListing"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_nav_one_to_many_question_details_to_nav_play_games"
+            app:destination="@id/nav_play_games" />
+        <action
+            android:id="@+id/action_nav_one_to_many_question_details_to_nav_home"
+            app:destination="@id/nav_home" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_d_to_one_question_details"
+        android:name="com.onourem.android.activity.ui.games.fragments.DToOneQuestionDetailsFragment"
+        android:label="@string/title_one_way_question"
+        tools:layout="@layout/fragment_d_to_one_question_details">
+        <argument
+            android:name="question"
+            app:argType="com.onourem.android.activity.models.LoginDayActivityInfoList" />
+
+        <argument
+            android:name="playGroup"
+            app:argType="com.onourem.android.activity.models.PlayGroup" />
+        <argument
+            android:name="gameIdToHighlight"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_invite_friends"
+        app:destination="@id/nav_invite_friends" />
+    <action
+        android:id="@+id/action_global_nav_picker_bottomsheet_dialog_fragment"
+        app:destination="@id/nav_picker_bottomsheet_dialog_fragment" />
+    <action
+        android:id="@+id/action_global_nav_select_privacy"
+        app:destination="@id/nav_select_privacy" />
+    <action
+        android:id="@+id/action_global_nav_media_view"
+        app:destination="@id/nav_media_view" />
+
+    <action
+        android:id="@+id/action_global_nav_ask_questions_sheet"
+        app:destination="@id/nav_ask_friends_sheet" />
+    <action
+        android:id="@+id/action_global_nav_bootom_sheet"
+        app:destination="@id/nav_bootom_sheet" />
+    <action
+        android:id="@+id/action_global_nav_user_action_bottom_sheet"
+        app:destination="@id/nav_user_action_bottom_sheet" />
+    <action
+        android:id="@+id/action_global_oneToManyQuestionDetailsFragment"
+        app:destination="@id/nav_one_to_many_question_details" />
+    <dialog
+        android:id="@+id/nav_edit_privacy_dialog"
+        android:name="com.onourem.android.activity.ui.games.fragments.EditPrivacyDialogFragment"
+        android:label="">
+        <argument
+            android:name="gameId"
+            app:argType="string" />
+        <argument
+            android:name="postId"
+            app:argType="string" />
+        <argument
+            android:name="showPrivateOption"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_edit_privacy_dialog"
+        app:destination="@id/nav_edit_privacy_dialog" />
+    <action
+        android:id="@+id/action_global_dToOneQuestionDetailsFragment"
+        app:destination="@id/nav_d_to_one_question_details" />
+    <fragment
+        android:id="@+id/nav_post_comment_list"
+        android:name="com.onourem.android.activity.ui.games.fragments.CommentListFragment"
+        android:label="Comments">
+        <argument
+            android:name="gameResId"
+            app:argType="string" />
+
+        <argument
+            android:name="gameId"
+            app:argType="string" />
+
+        <argument
+            android:name="postId"
+            app:argType="string" />
+
+        <argument
+            android:name="participantId"
+            app:argType="string" />
+        <argument
+            android:name="playGroupId"
+            app:argType="string" />
+        <argument
+            android:name="activityId"
+            app:argType="string" />
+
+        <argument
+            android:name="postCreatedId"
+            app:argType="string" />
+
+        <argument
+            android:name="from"
+            app:argType="string" />
+
+        <argument
+            android:name="isContentOwner"
+            app:argType="boolean" />
+
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_post_comment_list"
+        app:destination="@id/nav_post_comment_list" />
+    <fragment
+        android:id="@+id/nav_one_to_one_question_details"
+        android:name="com.onourem.android.activity.ui.games.fragments.OneToOneQuestionDetailsFragment"
+        android:label="@string/title_two_way_question"
+        tools:layout="@layout/fragment_one_to_many_question_details">
+        <argument
+            android:name="question"
+            app:argType="com.onourem.android.activity.models.LoginDayActivityInfoList" />
+
+        <argument
+            android:name="playGroup"
+            app:argType="com.onourem.android.activity.models.PlayGroup" />
+
+        <argument
+            android:name="gameIdToHighlight"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_nav_one_to_one_question_details"
+        app:destination="@id/nav_one_to_one_question_details" />
+
+    <fragment
+        android:id="@+id/nav_task_message_question_details"
+        android:name="com.onourem.android.activity.ui.games.fragments.TaskMessageQuestionDetailsFragment"
+        android:label="">
+        <argument
+            android:name="question"
+            app:argType="com.onourem.android.activity.models.LoginDayActivityInfoList" />
+
+        <argument
+            android:name="playGroup"
+            app:argType="com.onourem.android.activity.models.PlayGroup" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_notifications_message_details"
+        android:name="com.onourem.android.activity.ui.notifications.NotificationPostMessageDetailsFragment"
+        android:label="Message">
+        <argument
+            android:name="apiResponse"
+            app:argType="com.onourem.android.activity.models.GetUserProfileFeeds" />
+        <argument
+            android:name="loginDayActivityInfoList"
+            app:argType="com.onourem.android.activity.models.LoginDayActivityInfoList"
+            app:nullable="true" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_task_message_question_details"
+        app:destination="@id/nav_task_message_question_details" />
+    <action
+        android:id="@+id/action_global_nav_search"
+        app:destination="@id/nav_search" />
+
+    <action
+        android:id="@+id/action_global_nav_contact_us"
+        app:destination="@id/nav_contact_us" />
+    <action
+        android:id="@+id/action_global_nav_profile"
+        app:destination="@id/nav_profile" />
+    <fragment
+        android:id="@+id/nav_web_content"
+        android:name="com.onourem.android.activity.ui.settings.fragments.WebContentFragment"
+        android:label="">
+        <argument
+            android:name="webContent"
+            app:argType="com.onourem.android.activity.models.WebContent" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile_settings"
+        android:name="com.onourem.android.activity.ui.profile.ProfileSettingsFragment">
+        <action
+            android:id="@+id/action_nav_profile_settings_to_nav_profile_image_editor"
+            app:destination="@id/nav_profile_image_editor" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile_image_editor"
+        android:name="com.onourem.android.activity.ui.profile.ProfileImageEditorFragment"
+        android:label=""
+        tools:layout="@layout/fragment_profile_image_editor">
+        <argument
+            android:name="type"
+            app:argType="integer" />
+        <argument
+            android:name="profile"
+            app:argType="com.onourem.android.activity.models.UserProfileData" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_block_users_list"
+        android:name="com.onourem.android.activity.ui.settings.fragments.BlockListFragment"
+        android:label="Blocked Users"
+        tools:layout="@layout/fragment_block_list" />
+
+    <fragment
+        android:id="@+id/nav_delete_account"
+        android:name="com.onourem.android.activity.ui.settings.fragments.DeleteAccountFragment"
+        android:label="Delete Account"
+        tools:layout="@layout/fragment_delete_account">
+        <action
+            android:id="@+id/action_nav_delete_account_to_nav_delete_account_reasons"
+            app:destination="@id/nav_delete_account_reasons" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_report_problem"
+        app:destination="@id/nav_report_problem" />
+    <action
+        android:id="@+id/action_global_nav_all_surveys"
+        app:destination="@id/nav_all_surveys" />
+    <fragment
+        android:id="@+id/nav_push_notifications_settings"
+        android:name="com.onourem.android.activity.ui.settings.fragments.PushNotificationSettingsFragment">
+        <action
+            android:id="@+id/action_nav_push_notifications_settings_to_nav_time_picker"
+            app:destination="@id/nav_time_picker" />
+    </fragment>
+    <dialog
+        android:id="@+id/nav_time_picker"
+        android:name="com.onourem.android.activity.ui.dialog.TimePickerDialogFragment" />
+    <fragment
+        android:id="@+id/nav_f_of_f_search"
+        android:name="com.onourem.android.activity.ui.people.FriendOfFriendSearchFragment">
+        <argument
+            android:name="inputUserId"
+            app:argType="string" />
+        <argument
+            android:name="friendName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_search_question"
+        android:name="com.onourem.android.activity.ui.games.fragments.SearchQuestionFragment"
+        android:label="Search Question"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/nav_play_games_o_club"
+        android:name="com.onourem.android.activity.ui.games.fragments.PlayGamesOClubFragment"
+        android:label=""
+        tools:layout="@layout/fragment_play_games_oclub">
+        <argument
+            android:name="selectedGroup"
+            app:argType="com.onourem.android.activity.models.PlayGroup"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_nav_play_games_to_nav_play_group_member"
+            app:destination="@id/nav_play_group_member" />
+        <action
+            android:id="@+id/action_nav_play_games_to_nav_bootom_sheet"
+            app:destination="@id/nav_bootom_sheet" />
+        <action
+            android:id="@+id/action_nav_play_games_to_nav_create_own_question"
+            app:destination="@id/nav_create_own_question" />
+        <action
+            android:id="@+id/action_nav_play_games_to_nav_question_games"
+            app:destination="@id/nav_question_games" />
+        <action
+            android:id="@+id/action_nav_play_games_to_nav_search_question"
+            app:destination="@id/nav_search_question" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_review_onourem"
+        app:destination="@id/nav_review_onourem" />
+    <dialog
+        android:id="@+id/nav_edit_question"
+        android:name="com.onourem.android.activity.ui.games.dialogs.EditQuestionDialogFragment">
+        <argument
+            android:name="question"
+            app:argType="com.onourem.android.activity.models.LoginDayActivityInfoList" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_dashboard_new"
+        android:name="com.onourem.android.activity.ui.dashboard.DashboardNewFragment"
+        tools:layout="@layout/fragment_dashboard_new">
+        <action
+            android:id="@+id/action_nav_dashboard_new_to_nav_edit_add_watch_list"
+            app:destination="@id/nav_edit_add_watch_list" />
+        <action
+            android:id="@+id/action_nav_dashboard_new_to_nav_conversation_details"
+            app:destination="@id/nav_conversation_details" />
+        <argument
+            android:name="getWatchListResponse"
+            app:argType="com.onourem.android.activity.models.GetWatchListResponse" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_moods_today"
+        android:name="com.onourem.android.activity.ui.dashboard.MoodsTodayFragment">
+        <argument
+            android:name="userWatchlistResponse"
+            app:argType="com.onourem.android.activity.models.GetWatchListResponse" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_moods_today"
+        app:destination="@id/nav_moods_today" />
+    <fragment
+        android:id="@+id/nav_recorder_settings"
+        android:name="com.onourem.android.activity.ui.audio.fragments.RecorderSettingsFragment">
+        <argument
+            android:name="recordedAudioFilePath"
+            app:argType="string" />
+        <argument
+            android:name="mediaTotalDuration"
+            app:argType="long" />
+        <argument
+            android:name="isFromStorage"
+            app:argType="boolean" />
+        <argument
+            android:name="trimSelectionStart"
+            app:argType="integer" />
+        <argument
+            android:name="trimSelectionEnd"
+            app:argType="integer" />
+    </fragment>
+    <dialog
+        android:id="@+id/nav_delete_account_reasons"
+        android:name="com.onourem.android.activity.ui.settings.fragments.DeleteAccountReasonsDialogFragment" />
+    <fragment
+        android:id="@+id/nav_media_share"
+        android:name="com.onourem.android.activity.ui.dialog.MediaShareDialogFragment"
+        android:label="Media Share">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="linkMsg"
+            app:argType="string" />
+        <!--        <argument-->
+        <!--            android:name="shortLink"-->
+        <!--            app:argType="string" />-->
+        <argument
+            android:name="mediaUrl"
+            app:argType="string" />
+        <argument
+            android:name="mediaType"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_media_share"
+        app:destination="@id/nav_media_share" />
+    <dialog
+        android:id="@+id/nav_fun_cards"
+        android:name="com.onourem.android.activity.ui.games.fragments.FunCardsFragment"
+        android:label="Fun Cards">
+        <argument
+            android:name="linkUserId"
+            app:argType="string" />
+    </dialog>
+
+    <action
+        android:id="@+id/action_global_nav_fun_cards"
+        app:destination="@id/nav_fun_cards" />
+    <fragment
+        android:id="@+id/nav_onourem_intro"
+        android:name="com.onourem.android.activity.ui.intro.OnouremIntroFragment" />
+    <action
+        android:id="@+id/action_global_nav_onourem_intro"
+        app:destination="@id/nav_onourem_intro" />
+    <dialog
+        android:id="@+id/nav_audio_category"
+        android:name="com.onourem.android.activity.ui.audio.fragments.AudioCategoryFragment">
+        <argument
+            android:name="responseDataCategory"
+            app:argType="com.onourem.android.activity.ui.audio.models.GetAudioCategoryResponse" />
+    </dialog>
+    <dialog
+        android:id="@+id/nav_audio_language"
+        android:name="com.onourem.android.activity.ui.audio.fragments.AudioLanguageFragment">
+        <argument
+            android:name="responseDataLanguage"
+            app:argType="com.onourem.android.activity.ui.audio.models.GetAudioCategoryResponse" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_audio_category"
+        app:destination="@id/nav_audio_category" />
+    <fragment
+        android:id="@+id/nav_recorder"
+        android:name="com.onourem.android.activity.ui.audio.fragments.RecorderFragment"
+        android:label="Share Something">
+        <argument
+            android:name="audioLimit"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_nav_recorder_to_nav_audio_editor"
+            app:destination="@id/nav_audio_editor" />
+        <action
+            android:id="@+id/action_nav_recorder_to_nav_recorder_settings"
+            app:destination="@id/nav_recorder_settings" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_recorder"
+        app:destination="@id/nav_recorder" />
+    <action
+        android:id="@+id/action_global_nav_audio_language"
+        app:destination="@id/nav_audio_language" />
+    <dialog
+        android:id="@+id/nav_audio_privacy"
+        android:name="com.onourem.android.activity.ui.audio.fragments.AudioPrivacyFragment">
+        <argument
+            android:name="privacyGroups"
+            app:argType="com.onourem.android.activity.models.PrivacyGroup[]" />
+        <argument
+            android:name="defaultGroups"
+            app:argType="com.onourem.android.activity.models.PrivacyGroup[]" />
+        <argument
+            android:name="song"
+            app:argType="com.onourem.android.activity.ui.audio.playback.Song"
+            app:nullable="true" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_audio_privacy"
+        app:destination="@id/nav_audio_privacy" />
+    <dialog
+        android:id="@+id/nav_audio_picker"
+        android:name="com.onourem.android.activity.ui.audio.fragments.AudioPickerFragment" />
+    <action
+        android:id="@+id/action_global_audioPickerFragment"
+        app:destination="@id/nav_audio_picker" />
+    <dialog
+        android:id="@+id/nav_audio_background"
+        android:name="com.onourem.android.activity.ui.audio.fragments.AudioBackgroundFragment">
+        <argument
+            android:name="audioCategory"
+            app:argType="com.onourem.android.activity.ui.audio.models.AudioCategory" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_audio_background"
+        app:destination="@id/nav_audio_background" />
+    <dialog
+        android:id="@+id/nav_search_vocal"
+        android:name="com.onourem.android.activity.ui.audio.fragments.SearchVocalFragment" />
+    <dialog
+        android:id="@+id/nav_audio_stats"
+        android:name="com.onourem.android.activity.ui.audio.fragments.AudioStatsFragment">
+        <argument
+            android:name="song"
+            app:argType="com.onourem.android.activity.ui.audio.playback.Song" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_audio_stats"
+        app:destination="@id/nav_audio_stats" />
+    <fragment
+        android:id="@+id/nav_audio_games_previous_list"
+        android:name="com.onourem.android.activity.ui.audio.fragments.AudioGamesPreviousListFragment"
+        android:label="Current Vocals">
+        <argument
+            android:name="currentPlayingList"
+            app:argType="com.onourem.android.activity.ui.audio.playback.Song[]"
+            app:nullable="true" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_audio_games_previous_list"
+        app:destination="@id/nav_audio_games_previous_list" />
+    <fragment
+        android:id="@+id/nav_audio_editor"
+        android:name="com.onourem.android.activity.ui.audio.fragments.AudioEditorFragment"
+        android:label="Edit Audio">
+
+        <argument
+            android:name="recordedAudioFilePath"
+            app:argType="string" />
+        <argument
+            android:name="mediaTotalDuration"
+            app:argType="long" />
+        <argument
+            android:name="isFromStorage"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_nav_audio_editor_to_nav_recorder_settings"
+            app:destination="@id/nav_recorder_settings" />
+    </fragment>
+    <dialog
+        android:id="@+id/nav_audio_comment"
+        android:name="com.onourem.android.activity.ui.audio.fragments.AudioCommentDialogFragment">
+        <argument
+            android:name="audioId"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/nav_audio_comments_list"
+        android:name="com.onourem.android.activity.ui.audio.fragments.AudioCommentListFragment"
+        android:label="Audio Comments">
+        <argument
+            android:name="audioId"
+            app:argType="string" />
+
+        <argument
+            android:name="audioCreatorId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_audio_comments_list_to_nav_audio_comment"
+            app:destination="@id/nav_audio_comment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_appreciate_dialog"
+        app:destination="@id/nav_appreciate_dialog" />
+    <fragment
+        android:id="@+id/nav_conversations"
+        android:name="com.onourem.android.activity.ui.message.ConversationFragment"
+        android:label="Chats">
+        <action
+            android:id="@+id/action_nav_conversations_to_nav_conversation_details"
+            app:destination="@id/nav_conversation_details" />
+        <argument
+            android:name="conversation"
+            app:argType="com.onourem.android.activity.models.Conversation" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_conversations"
+        app:destination="@id/nav_conversations" />
+    <fragment
+        android:id="@+id/nav_conversation_details"
+        android:name="com.onourem.android.activity.ui.message.ConversationDetailsFragment">
+        <argument
+            android:name="conversation"
+            app:argType="com.onourem.android.activity.models.Conversation" />
+    </fragment>
+    <dialog
+        android:id="@+id/nav_friend_picker"
+        android:name="com.onourem.android.activity.ui.message.FriendPickerFragment">
+        <action
+            android:id="@+id/action_nav_friend_picker_to_nav_conversation_details"
+            app:destination="@id/nav_conversation_details" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_friend_picker"
+        app:destination="@id/nav_friend_picker" />
+    <action
+        android:id="@+id/action_global_nav_conversation_details"
+        app:destination="@id/nav_conversation_details" />
+    <fragment
+        android:id="@+id/nav_vocals_main"
+        android:name="com.onourem.android.activity.ui.audio.fragments.VocalsFragment">
+
+        <argument
+            android:name="vocalUserId"
+            app:argType="string" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="linkUserId"
+            app:argType="string" />
+        <argument
+            android:name="audioIdFromNotification"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_others_vocals"
+        android:name="com.onourem.android.activity.ui.audio.fragments.OthersVocalsFragment">
+
+        <argument
+            android:name="vocalUserId"
+            app:argType="string" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="linkUserId"
+            app:argType="string" />
+        <argument
+            android:name="audioIdFromNotification"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_mood_mapping"
+        android:name="com.onourem.android.activity.ui.dashboard.MoodMappingFragment"
+        android:label="Mood Chart" />
+
+    <fragment
+        android:id="@+id/nav_mood_history"
+        android:name="com.onourem.android.activity.ui.dashboard.MoodHistoryFragment"
+        android:label="Mood History" />
+
+    <action
+        android:id="@+id/action_global_nav_vocals_main"
+        app:destination="@id/nav_vocals_main" />
+    <fragment
+        android:id="@+id/nav_trending_vocals"
+        android:name="com.onourem.android.activity.ui.audio.fragments.TrendingVocalsFragment"
+        android:label="TrendingVocalsFragment" />
+    <fragment
+        android:id="@+id/nav_friends_vocals"
+        android:name="com.onourem.android.activity.ui.audio.fragments.FriendsVocalsFragment"
+        android:label="FriendsVocalsFragment" />
+    <fragment
+        android:id="@+id/nav_my_vocals"
+        android:name="com.onourem.android.activity.ui.audio.fragments.MyVocalsFragment"
+        android:label="My Vocals" />
+
+    <fragment
+        android:id="@+id/nav_my_vocals_profile"
+        android:name="com.onourem.android.activity.ui.audio.fragments.ProfileMyVocalsFragment"
+        android:label="My Vocals" />
+
+    <fragment
+        android:id="@+id/nav_my_question_played"
+        android:name="com.onourem.android.activity.ui.profile.MyQuestionPlayedFragment"
+        android:label="My Played Questions" />
+
+    <fragment
+        android:id="@+id/nav_my_questions"
+        android:name="com.onourem.android.activity.ui.profile.MyOwnQuestionsFragment"
+        android:label="My Created Questions">
+        <action
+            android:id="@+id/action_nav_my_questions_to_nav_edit_question"
+            app:destination="@id/nav_edit_question" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_favorite_vocals"
+        android:name="com.onourem.android.activity.ui.audio.fragments.FavoriteVocalsFragment"
+        android:label="FavoriteVocalsFragment" />
+    <action
+        android:id="@+id/action_global_nav_audio_comments_list"
+        app:destination="@id/nav_audio_comments_list" />
+    <action
+        android:id="@+id/action_global_nav_audio_comment"
+        app:destination="@id/nav_audio_comment" />
+    <action
+        android:id="@+id/action_global_nav_others_vocals"
+        app:destination="@id/nav_others_vocals" />
+    <action
+        android:id="@+id/action_global_nav_search_vocal"
+        app:destination="@id/nav_search_vocal" />
+
+    <dialog
+        android:id="@+id/nav_mood_info_sheet"
+        android:name="com.onourem.android.activity.ui.dashboard.MoodsInfoSheetFragment">
+        <argument
+            android:name="expressionMessage"
+            app:argType="string" />
+        <argument
+            android:name="reason"
+            app:argType="string" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_mood_info_sheet"
+        app:destination="@id/nav_mood_info_sheet" />
+    <action
+        android:id="@+id/action_global_nav_mood_mapping"
+        app:destination="@id/nav_mood_mapping" />
+    <action
+        android:id="@+id/action_global_nav_mood_history"
+        app:destination="@id/nav_mood_history" />
+    <fragment
+        android:id="@+id/nav_search_vocals_by_title"
+        android:name="com.onourem.android.activity.ui.audio.fragments.SearchVocalsByTitleFragment"
+        android:label="Search Vocals" />
+    <action
+        android:id="@+id/action_global_nav_search_vocals_by_title"
+        app:destination="@id/nav_search_vocals_by_title" />
+    <dialog
+        android:id="@+id/nav_search_action"
+        android:name="com.onourem.android.activity.ui.bottomsheet.SearchActionBottomSheetDialogFragment">
+
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="actions"
+            app:argType="android.os.Bundle" />
+        <argument
+            android:name="subTitle"
+            app:argType="string" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_search_action"
+        app:destination="@id/nav_search_action" />
+    <action
+        android:id="@+id/action_global_nav_dashboard_new"
+        app:destination="@id/nav_dashboard_new" />
+    <dialog
+        android:id="@+id/nav_mood_reason"
+        android:name="com.onourem.android.activity.ui.dashboard.mood.MoodReasonSheetFragment">
+
+
+        <argument
+            android:name="expressionMessage"
+            app:argType="string" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_mood_reason"
+        app:destination="@id/nav_mood_reason" />
+    <fragment
+        android:id="@+id/nav_dummy_guest"
+        android:name="com.onourem.android.activity.ui.dashboard.guest.GuestDummyFragment">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="details"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_dummy_guest"
+        app:destination="@id/nav_dummy_guest" />
+    <fragment
+        android:id="@+id/nav_guest_one_to_many_games"
+        android:name="com.onourem.android.activity.ui.dashboard.guest.GuestOneToManyQuestionDetailsFragment"
+        android:label="Solo Games">
+
+        <argument
+            android:name="question"
+            app:argType="com.onourem.android.activity.models.LoginDayActivityInfoList" />
+
+        <argument
+            android:name="playGroup"
+            app:argType="com.onourem.android.activity.models.PlayGroup" />
+
+        <argument
+            android:name="gameIdToHighlight"
+            app:argType="string"
+            app:nullable="true" />
+
+        <argument
+            android:name="gameActivityResIdToHighlight"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="isFromQuestionListing"
+            app:argType="boolean" />
+
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_guest_one_to_many_games"
+        app:destination="@id/nav_guest_one_to_many_games" />
+    <action
+        android:id="@+id/action_global_nav_guest_statistics_survey"
+        app:destination="@id/nav_guest_statistics_survey"
+        app:launchSingleTop="true" />
+    <fragment
+        android:id="@+id/nav_web_external_content"
+        android:name="com.onourem.android.activity.ui.games.WebExternalContentFragment"
+        android:label="External Content">
+        <argument
+            android:name="webUrl"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_web_external_content"
+        app:destination="@id/nav_web_external_content" />
+    <dialog
+        android:id="@+id/nav_phone_call"
+        android:name="com.onourem.android.activity.ui.games.dialogs.PhoneCallDialogFragment">
+        <argument
+            android:name="infoImageUrl"
+            app:argType="string" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_phone_call"
+        app:destination="@id/nav_phone_call" />
+    <fragment
+        android:id="@+id/nav_friends_circle_main"
+        android:name="com.onourem.android.activity.ui.circle.fragments.FriendsCircleMainFragment"
+        android:label="BOND 003 Game">
+        <action
+            android:id="@+id/action_nav_friends_circle_main_to_nav_friends_circle_add_number"
+            app:destination="@id/nav_friends_circle_add_number" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_friends_circle_main"
+        app:destination="@id/nav_friends_circle_main" />
+    <fragment
+        android:id="@+id/nav_friends_circle_add_number"
+        android:name="com.onourem.android.activity.ui.circle.fragments.FriendsCircleAddNumberFragment"
+        android:label="Verify Phone Number">
+
+        <argument
+            android:name="isFromBubbleScreen"
+            app:argType="boolean" />
+
+        <action
+            android:id="@+id/action_nav_friends_circle_add_number_to_nav_select_contacts"
+            app:destination="@id/nav_select_contacts" />
+        <action
+            android:id="@+id/action_nav_friends_circle_add_number_to_nav_otp"
+            app:destination="@id/nav_otp" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_select_contacts"
+        android:name="com.onourem.android.activity.ui.circle.fragments.FriendsCircleSelectContactsFragment">
+
+        <argument
+            android:name="isFromBubbleScreen"
+            app:argType="boolean" />
+
+        <action
+            android:id="@+id/action_nav_select_contacts_to_nav_contacts_list"
+            app:destination="@id/nav_contacts_list" />
+        <argument
+            android:name="isFromQuestionViewPger"
+            app:argType="boolean" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_friends_circle_question_view_pager"
+        android:name="com.onourem.android.activity.ui.circle.fragments.FriendsCircleQuestionViewPagerFragment"
+        android:label="BOND 003 Game">
+        <argument
+            android:name="questionListResponse"
+            app:argType="com.onourem.android.activity.models.GetQualityQuestionsResponse" />
+        <argument
+            android:name="reload"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_nav_friends_circle_question_view_pager_to_nav_select_contacts"
+            app:destination="@id/nav_select_contacts" />
+    </fragment>
+
+
+    <dialog
+        android:id="@+id/nav_otp"
+        android:name="com.onourem.android.activity.ui.circle.fragments.OTPDialogFragment"
+        android:label="BOND 003 Game" />
+
+    <dialog
+        android:id="@+id/nav_contacts_list"
+        android:name="com.onourem.android.activity.ui.circle.fragments.SelectContactsDialogFragment"
+        android:label="BOND 003 Game">
+        <argument
+            android:name="questionListResponse"
+            app:argType="com.onourem.android.activity.models.GetQualityQuestionsResponse" />
+        <argument
+            android:name="reload"
+            app:argType="boolean" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_friends_circle_question_view_pager"
+        app:destination="@id/nav_friends_circle_question_view_pager" />
+    <action
+        android:id="@+id/action_global_nav_contacts_list"
+        app:destination="@id/nav_contacts_list" />
+    <dialog
+        android:id="@+id/nav_wel_done"
+        android:name="com.onourem.android.activity.ui.circle.fragments.WellDoneDialogFragment">
+        <argument
+            android:name="backgroundColor"
+            app:argType="string" />
+        <argument
+            android:name="waveColor"
+            app:argType="string" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_wel_done"
+        app:destination="@id/nav_wel_done" />
+    <fragment
+        android:id="@+id/nav_friends_thoughts"
+        android:name="com.onourem.android.activity.ui.circle.fragments.FriendsThoughtsFragment"
+        android:label="Friends Thoughts">
+        <action
+            android:id="@+id/action_nav_friends_thoughts_to_nav_select_contacts"
+            app:destination="@id/nav_select_contacts" />
+        <argument
+            android:name="clearContactList"
+            app:argType="boolean" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_friends_thoughts"
+        app:destination="@id/nav_friends_thoughts" />
+    <dialog
+        android:id="@+id/nav_tagged_friends"
+        android:name="com.onourem.android.activity.ui.circle.fragments.ShowTaggedFriendsDialogFragment">
+        <argument
+            android:name="userQualityInfo"
+            app:argType="com.onourem.android.activity.models.UserQualityInfo" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_tagged_friends"
+        app:destination="@id/nav_tagged_friends" />
+    <action
+        android:id="@+id/action_global_nav_friends_circle_add_number"
+        app:destination="@id/nav_friends_circle_add_number" />
+    <dialog
+        android:id="@+id/nav_share_something"
+        android:name="com.onourem.android.activity.ui.dashboard.landing.ShareSomethingDialogFragment" />
+    <action
+        android:id="@+id/action_global_nav_share_something"
+        app:destination="@id/nav_share_something" />
+    <action
+        android:id="@+id/action_global_nav_compose_message_dialog"
+        app:destination="@id/nav_compose_message_dialog" />
+    <action
+        android:id="@+id/action_global_nav_create_own_question"
+        app:destination="@id/nav_create_own_question" />
+    <action
+        android:id="@+id/action_global_nav_question_games"
+        app:destination="@id/nav_question_games" />
+    <fragment
+        android:id="@+id/nav_ambassador"
+        android:name="com.onourem.android.activity.ui.dashboard.AmbassadorFragment"
+        android:label="Apply to be an Onourem Ambassador" />
+    <action
+        android:id="@+id/action_global_nav_ambassador"
+        app:destination="@id/nav_ambassador" />
+    <fragment
+        android:id="@+id/nav_filter_list"
+        android:name="com.onourem.android.activity.ui.profile.FilterListFragment">
+        <argument
+            android:name="filterId"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_filter_list"
+        app:destination="@id/nav_filter_list" />
+    <action
+        android:id="@+id/action_global_nav_my_vocals"
+        app:destination="@id/nav_my_vocals" />
+    <action
+        android:id="@+id/action_global_nav_my_questions"
+        app:destination="@id/nav_my_questions" />
+    <action
+        android:id="@+id/action_global_nav_my_question_played"
+        app:destination="@id/nav_my_question_played" />
+    <action
+        android:id="@+id/action_global_nav_my_vocals_profile"
+        app:destination="@id/nav_my_vocals_profile" />
+    <dialog
+        android:id="@+id/nav_subscription_package"
+        android:name="com.onourem.android.activity.ui.dashboard.subscription.SubscriptionPurchaseFragment" />
+    <action
+        android:id="@+id/action_global_nav_subscription_package"
+        app:destination="@id/nav_subscription_package" />
+    <fragment
+        android:id="@+id/nav_my_subscriptions"
+        android:name="com.onourem.android.activity.ui.dashboard.subscription.MySubscriptionFragment"
+        android:label="Subscription" />
+    <action
+        android:id="@+id/action_global_nav_my_subscriptions"
+        app:destination="@id/nav_my_subscriptions" />
+    <dialog
+        android:id="@+id/nav_share_code"
+        android:name="com.onourem.android.activity.ui.dashboard.subscription.ShareCodeFragment">
+        <argument
+            android:name="info"
+            app:argType="com.onourem.android.activity.models.UserCurrentSubscriptionInfo" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_share_code"
+        app:destination="@id/nav_share_code" />
+    <dialog
+        android:id="@+id/nav_share_content"
+        android:name="com.onourem.android.activity.ui.message.share.ShareContentSheetFragment">
+
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="linkMsg"
+            app:argType="string" />
+
+        <argument
+            android:name="mediaUrl"
+            app:argType="string" />
+        <argument
+            android:name="mediaType"
+            app:argType="string" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_share_content"
+        app:destination="@id/nav_share_content" />
+    <dialog
+        android:id="@+id/nav_purchase_status"
+
+        android:name="com.onourem.android.activity.ui.dashboard.subscription.PurchaseStatusSheet">
+        <argument
+            android:name="paymentStatus"
+            app:argType="com.onourem.android.activity.models.PaymentStatus" />
+
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_purchase_status"
+        app:destination="@id/nav_purchase_status" />
+
+    <dialog
+        android:id="@+id/nav_free_purchase_status"
+        android:name="com.onourem.android.activity.ui.dashboard.subscription.FreePurchaseStatusSheet">
+
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_free_purchase_status"
+        app:destination="@id/nav_free_purchase_status" />
+    <fragment
+        android:id="@+id/nav_ccavenue_web"
+        android:name="com.onourem.android.activity.ui.dashboard.subscription.ccavenue.activity.CCAvenueWebFragment">
+        <argument
+            android:name="orderInfo"
+            app:argType="com.onourem.android.activity.models.GetOrderInfoRes" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_nav_ccavenue_web"
+        app:destination="@id/nav_ccavenue_web" />
+    <fragment
+        android:id="@+id/nav_notification_external_post_details_fragment"
+        android:name="com.onourem.android.activity.ui.notifications.NotificationExternalPostDetailsFragment"
+        android:label="Gems From Internet">
+        <argument
+            android:name="activity"
+            app:argType="com.onourem.android.activity.models.LoginDayActivityInfoList" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_nav_anonymous_survey"
+        app:destination="@id/nav_anonymous_survey" />
+    <action
+        android:id="@+id/action_global_nav_statistics_survey"
+        app:destination="@id/nav_statistics_survey" />
+
+
+    <fragment
+        android:id="@+id/nav_offline_counselling"
+        android:name="com.onourem.android.activity.ui.counselling.offline.InstituteOfflinePOCFragment"
+        android:label="Offline Counselling"></fragment>
+
+    <action
+        android:id="@+id/action_global_nav_offline_counselling"
+        app:destination="@id/nav_offline_counselling" />
+
+    <fragment
+        android:id="@+id/nav_online_counselling"
+        android:name="com.onourem.android.activity.ui.counselling.onourem.OnouremOnlineCounsellingFragment"
+        android:label="Online Counselling"></fragment>
+
+    <action
+        android:id="@+id/action_global_nav_online_counselling"
+        app:destination="@id/nav_online_counselling" />
+
+    <!--    <dialog-->
+    <!--        android:id="@+id/nav_ask_counselling"-->
+    <!--        android:name="com.onourem.android.activity.ui.counselling.AskCounsellingFragment">-->
+    <!--    </dialog>-->
+
+    <fragment
+        android:id="@+id/nav_ask_counselling"
+        android:name="com.onourem.android.activity.ui.counselling.AskCounsellingFragment">
+        <argument
+            android:name="apiReponseUserMood"
+            app:argType="com.onourem.android.activity.models.GetUserMoodResponseMsgResponse" />
+        <argument
+            android:name="apiInstituteResponse"
+            app:argType="com.onourem.android.activity.models.GetInstituteCounsellingInfoResponse" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_nav_ask_counselling"
+        app:destination="@id/nav_ask_counselling" />
+
+    <dialog
+        android:id="@+id/nav_info_counselling"
+        android:name="com.onourem.android.activity.ui.counselling.CounsellingInfoDialogFragment">
+
+        <argument
+            android:name="apiReponseUserMood"
+            app:argType="com.onourem.android.activity.models.GetUserMoodResponseMsgResponse" />
+    </dialog>
+
+    <action
+        android:id="@+id/action_global_nav_info_counselling"
+        app:destination="@id/nav_info_counselling" />
+
+</navigation>

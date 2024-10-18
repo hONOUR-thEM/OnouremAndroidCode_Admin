@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_outlined_rectangle_light_grey"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNewMembers"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:drawableStart="@drawable/ic_questions_games_round_shape_small_blue"
+            android:drawableLeft="@drawable/ic_questions_games_round_shape_small_blue"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:minLines="2"
+            android:text="@string/label_new_members"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvNewQuestions"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNewQuestions"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:drawableStart="@drawable/ic_questions_games_round_shape_small_pink"
+            android:drawableLeft="@drawable/ic_questions_games_round_shape_small_pink"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:minLines="2"
+            android:text="@string/label_new_questions"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvNewAnswers"
+            app:layout_constraintStart_toEndOf="@+id/tvNewMembers"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNewAnswers"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:drawableStart="@drawable/ic_questions_games_round_shape_small_green"
+            android:drawableLeft="@drawable/ic_questions_games_round_shape_small_green"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_new_answers"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvNewQuestions"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

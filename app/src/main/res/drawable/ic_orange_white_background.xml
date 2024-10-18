@@ -1,0 +1,20 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    <item>-->
+    <!--        <shape android:shape="rectangle">-->
+    <!--            <solid android:color="#FFFFFF" />-->
+
+    <!--&lt;!&ndash;            <size&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:width="@dimen/dimens_width_bg"&ndash;&gt;-->
+    <!--&lt;!&ndash;                android:height="@dimen/dimens_height_bg" />&ndash;&gt;-->
+    <!--        </shape>-->
+    <!--    </item>-->
+
+    <item
+        android:start="-1dp"
+        android:top="-30dp">
+        <bitmap
+            android:gravity="center|fill"
+            android:tint="@color/colorPrimary"
+            android:src="@drawable/ic_shape_wave" />
+    </item>
+</layer-list>

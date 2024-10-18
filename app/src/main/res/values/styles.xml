@@ -1,0 +1,757 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowContentTransitions" tools:ignore="NewApi">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialog</item>
+        <item name="android:textViewStyle">@style/AppTextView.DefaultTextBody</item>
+        <item name="android:actionButtonStyle">@style/ActionButtonStyle</item>
+
+
+    </style>
+
+    <style name="ActionButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <!--        <item name="android:minWidth">8dip</item>-->
+        <item name="android:insetLeft">1dip</item>
+        <item name="android:insetRight">1dip</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:minWidth">0dip</item>
+
+        <!--        <item name="android:paddingStart">0dip</item>-->
+        <!--        <item name="android:paddingEnd">8dip</item>-->
+    </style>
+
+    <!--    <style name="MyDialog" parent="@android:style/Theme.Dialog">-->
+    <!--        <item name="android:windowFrame">@null</item>-->
+    <!--        <item name="android:windowBackground">#00FFFFFF</item>-->
+    <!--        <item name="android:windowIsFloating">true</item>-->
+    <!--        <item name="android:windowContentOverlay">@null</item>-->
+    <!--        <item name="android:windowTitleStyle">@null</item>-->
+    <!--        <item name="android:colorBackgroundCacheHint">@null</item>-->
+    <!--        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>-->
+    <!--        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>-->
+    <!--        <item name="android:gravity">center</item>-->
+    <!--    </style>-->
+
+
+    <style name="AppTheme.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="badgeStyle">@style/Badge</item>
+        <item name="itemTextAppearanceActive">@style/MyBottomNavigationView.TextAppearance</item>
+        <item name="itemTextAppearanceInactive">@style/MyBottomNavigationView.TextAppearance</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="itemIconSize">20dp</item>
+    </style>
+
+    <style name="MyBottomNavigationView.TextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">9dp</item>
+        <item name="fontFamily">@font/montserrat_family</item>
+    </style>
+
+    <style name="Badge" parent="Widget.MaterialComponents.Badge">
+        <!--        <item name="badgeTextColor">@color/color_pink</item>-->
+        <item name="backgroundColor">@color/color_red</item>
+
+    </style>
+
+    <style name="AppTextView.DefaultTextBody" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.OnouremTypoStyles.Body2</item>
+    </style>
+
+    <style name="AppTheme.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">14dp</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme.EditTextCapWords" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">14dp</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent
+        </item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.TransparentAppBar" parent="AppTheme">
+        <item name="colorPrimary">@android:color/transparent</item>
+    </style>
+
+    <style name="AppButton.BlackButton" parent="Widget.MaterialComponents.Button">
+        <!--        <item name="android:background">@drawable/selector_black_button</item>-->
+        <item name="android:textAppearance">@style/AppButton.TextAppearance</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Medium</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="backgroundTint">@color/color_black</item>
+    </style>
+
+    <style name="AppButton.OrangeButton" parent="Widget.MaterialComponents.Button">
+        <!--        <item name="android:background">@drawable/selector_orange_button</item>-->
+        <item name="android:textAppearance">@style/AppButton.TextAppearance</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Medium</item>
+
+    </style>
+
+    <style name="AppButton.OrangeButton.Small" parent="AppButton.OrangeButton">
+        <!--        <item name="android:background">@drawable/selector_orange_button</item>-->
+        <item name="android:textAppearance">@style/AppButton.TextAppearance.Small</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Medium</item>
+
+    </style>
+
+    <style name="TextAppearance.RoundCornerButton.Small" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.RoundCornerButton.Large" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppButton.RoundCornerButton.Large" parent="Widget.MaterialComponents.Button">
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="cornerRadius">25dp</item>
+        <!--        <item name="android:minWidth">100dip</item>-->
+        <item name="android:minHeight">50dip</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.RoundCornerButton.Large</item>
+    </style>
+
+    <style name="AppButton.RoundCornerButton.Small" parent="Widget.MaterialComponents.Button">
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="cornerRadius">15dp</item>
+        <!--        <item name="android:minWidth">100dip</item>-->
+        <item name="android:minHeight">24dip</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.RoundCornerButton.Small</item>
+    </style>
+
+    <style name="AppButton.RoundCornerRadioButton.Small" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetLeft">1dp</item>
+        <item name="android:insetRight">1dp</item>
+        <item name="android:minWidth">80dp</item>
+        <item name="android:gravity">center</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.RoundCornerButton.Small</item>
+    </style>
+
+
+    <style name="AppButton.RedButton.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="color">@color/color_red</item>
+        <item name="strokeColor">@color/color_red</item>
+        <item name="android:textAppearance">@style/AppButton.TextAppearance</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppButton.BlackButton.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="color">@color/color_black</item>
+        <item name="strokeColor">@color/color_black</item>
+        <item name="android:textAppearance">@style/AppButton.TextAppearance</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppButton.WhiteButton.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="color">@color/white</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="android:textAppearance">@style/AppButton.TextAppearance</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppButton.OrangeButton.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="color">@color/colorAccent</item>
+        <item name="strokeColor">@color/colorAccent</item>
+        <item name="android:textAppearance">@style/AppButton.TextAppearance</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppButton.BlackButtonRounded.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="color">@color/color_black</item>
+        <item name="strokeColor">@color/color_black</item>
+        <item name="android:textAppearance">@style/AppButton.TextAppearance</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="cornerRadius">25dp</item>
+        <!--        <item name="android:minWidth">100dip</item>-->
+        <item name="android:minHeight">50dip</item>
+        <item name="android:paddingStart">40dp</item>
+        <item name="android:paddingLeft">40dp</item>
+        <item name="android:paddingEnd">40dp</item>
+        <item name="android:paddingRight">40dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="AppButton.GrayButton.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="color">@color/color_dark_gray</item>
+        <item name="strokeColor">@color/color_dark_gray</item>
+        <item name="android:textAppearance">@style/AppButton.TextAppearance</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_dark_gray</item>
+
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppButton.Outline.Small" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="color">@color/color_red</item>
+        <item name="strokeColor">@color/color_red</item>
+        <item name="android:textAppearance">@style/AppButton.TextAppearance.Small</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppButton.BlueButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAppearance">@style/AppButton.TextAppearance</item>
+        <item name="backgroundTint">@color/com_facebook_blue</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Medium</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">40dp</item>
+    </style>
+
+    <style name="AppButton.TextAppearance" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="AppButton.TextAppearance.Small" parent="AppButton.TextAppearance">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="AppTextView.TitleTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/AppTextView.TitleTextViewAppearance</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTextView.TitleTextView_Text_Caps_OFF" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/AppTextView.TitleTextViewAppearance</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTextView.TitleTextViewAppearance" parent="TextAppearance.OnouremTypoStyles.Headline6">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:letterSpacing" tools:ignore="NewApi">0.0</item>
+    </style>
+
+    <style name="AppTextView.TitleTextViewAppearance.White" parent="TextAppearance.OnouremTypoStyles.Headline6">
+        <item name="android:letterSpacing" tools:ignore="NewApi">0.1</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="AppTextView.SubTitleTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.OnouremTypoStyles.Headline5
+        </item>
+        <item name="android:lineSpacingMultiplier">1.0</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeStepGranularity">2dp</item>
+        <item name="autoSizeMinTextSize">12dp</item>
+        <item name="autoSizeMaxTextSize">25dp</item>
+        <!--        <item name="android:fontFamily">@font/montserrat_bold</item>-->
+        <!--        <item name="fontFamily">@font/montserrat_bold</item>-->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTextView.MediumTextBody" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textAppearance">@style/AppTextView.MediumTextAppearance</item>
+    </style>
+
+    <style name="AppTextView.MediumTextAppearance" parent="TextAppearance.OnouremTypoStyles.Body1">
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="AppTextView.ExtraSmallTextBody" parent="TextAppearance.OnouremTypoStyles.Body2">
+        <!--        <item name="android:textAppearance">@style/AppTextView.ExtraSmallTextAppearance</item>-->
+        <!--        <item name="android:fontFamily">@font/montserrat_medium</item>-->
+        <!--        <item name="fontFamily">@font/montserrat_medium</item>-->
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:padding">0dp</item>
+
+    </style>
+
+    <style name="AppTextView.ExtraSmallTextBody.Bold" parent="AppTextView.ExtraSmallTextBody">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="AppTextView.SmallTextBody" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="AppTextView.CommentText" parent="TextAppearance.OnouremTypoStyles.Subtitle1">
+        <item name="android:textColor">@color/color_black</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="AppTextView.SmallTextBody.Bold" parent="AppTextView.SmallTextBody">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTextView.LargeTextBody" parent="Widget.AppCompat.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.OnouremTypoStyles.Headline5</item>
+        <item name="android:textColor">@color/color_black</item>
+    </style>
+
+    <style name="AppTextView.MediumTextBody.Bold" parent="AppTextView.MediumTextBody">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTextView.SplashAppTitle.Bold" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textStyle">bold</item>
+        <!--        <item name="android:fontWeight" tools:ignore="NewApi">700</item>-->
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="AppTextInputLayoutDropDownOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="startIconTint">@color/colorPrimary</item>
+        <item name="android:textAppearance">@style/AppTextView.MediumTextBody</item>
+    </style>
+
+    <style name="AppTextInputLayoutOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="startIconTint">@color/colorPrimary</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="android:textAppearance">@style/AppTextView.MediumTextBody</item>
+        <item name="endIconTint">@color/color_gray_cross</item>
+    </style>
+
+    <style name="AppTextInputLayoutOutlinedBox.Password" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAppearance">@style/AppTextView.MediumTextBody</item>
+        <item name="startIconTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppColoredButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="AppColoredButton.Black" parent="AppColoredButton">
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/AppTextView.MediumTextAppearance</item>
+        <!--        <item name="android:fontFamily">@font/montserrat_bold</item>-->
+        <!--        <item name="fontFamily">@font/montserrat_bold</item>-->
+    </style>
+
+
+    <style name="NavigationViewTextStyle" parent="AppTextView.SmallTextBody.Bold">
+        <item name="android:textColor">@color/color_state_nav_view_item_text</item>
+    </style>
+
+
+    <style name="SurveyLegendDialog" parent="FullScreenDialogStyle">
+        <item name="android:windowAnimationStyle">@style/SurveyLegendDialogAnimation</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+    <style name="SurveyLegendDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/translate_left_side</item>
+        <item name="android:windowExitAnimation">@anim/translate_right_side</item>
+    </style>
+
+    <style name="FullScreenDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="windowNoTitle">true</item>
+
+        <!-- The rest of your attributes -->
+        <item name="colorButtonNormal">@color/colorAccent</item>
+
+        <!-- Set this to true if you want Full Screen without status bar -->
+        <item name="android:windowFullscreen">false</item>
+
+        <item name="android:windowIsFloating">false</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+
+    <style name="FullScreenDialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="windowNoTitle">true</item>
+
+        <!-- The rest of your attributes -->
+        <item name="colorButtonNormal">@color/colorAccent</item>
+
+        <!-- Set this to true if you want Full Screen without status bar -->
+        <item name="android:windowFullscreen">false</item>
+
+        <item name="android:windowIsFloating">false</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textViewStyle">@style/AppTextView.DefaultTextBody</item>
+
+    </style>
+
+
+    <style name="AppTextView.Intro.Title" parent="Widget.AppCompat.TextView">
+        <item name="android:singleLine">true</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textAppearance">@style/AppTextView.Intro.TitleTextAppearance</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="AppTextView.Intro.TitleTextAppearance" parent="TextAppearance.OnouremTypoStyles.Headline6">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="AppTextView.Intro.SubtitleTextView" parent="TextAppearance.OnouremTypoStyles.Headline5">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textAppearance">@style/AppTextView.Intro.Subtitle.TextAppearance</item>
+    </style>
+
+    <style name="AppTextView.Intro.Subtitle.TextAppearance" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTextView.Tile.Header" parent="">
+        <item name="android:textAppearance">@style/TextAppearance.OnouremTypoStyles.Headline4
+        </item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+
+    </style>
+
+    <style name="AppTextView.Tile.SubHeader" parent="">
+        <item name="android:textSize">13dp</item>
+        <item name="android:letterSpacing" tools:ignore="NewApi">0.08</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+    </style>
+
+    <style name="ExtendedFab" parent="Widget.MaterialComponents.ExtendedFloatingActionButton.Icon">
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="icon">@drawable/ic_add_white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="iconTint">@color/color_white</item>
+        <item name="fabSize">mini</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/AppTextView.MediumTextAppearance</item>
+    </style>
+
+    <style name="Fab" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:padding">2dp</item>
+        <item name="fabSize">auto</item>
+        <item name="elevation">5dp</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="maxImageSize">48dp</item>
+        <item name="tint">@color/color_white</item>
+    </style>
+
+    <style name="dialogAlertTheme" parent="Theme.MaterialComponents.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:buttonBarButtonStyle">@style/AppButton.BlackButton</item>
+    </style>
+
+    <style name="BottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="AppTheme.ChipGroup" parent="Widget.MaterialComponents.ChipGroup">
+        <item name="chipSpacingVertical">-10dp</item>
+
+    </style>
+
+    <style name="AppTheme.AlertDialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+    </style>
+
+    <!-- set the rounded drawable as background to your bottom sheet -->
+    <style name="BottomSheet" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_rounded_corner</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/color_transparent</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="ShapeAppearance.Small" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerSize">5dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="ShapeAppearance.Medium" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">8dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <style name="TextAppearance.OnouremTypoStyles.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/montserrat_family</item>
+        <item name="android:fontFamily">@font/montserrat_family</item>
+        <item name="android:textSize">34dp</item>
+    </style>
+
+    <style name="TextAppearance.OnouremTypoStyles.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/montserrat_family</item>
+        <item name="android:fontFamily">@font/montserrat_family</item>
+        <item name="android:textSize">24dp</item>
+    </style>
+
+    <style name="TextAppearance.OnouremTypoStyles.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/montserrat_family</item>
+        <item name="android:fontFamily">@font/montserrat_family</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="TextAppearance.OnouremTypoStyles.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/montserrat_family</item>
+        <item name="android:fontFamily">@font/montserrat_family</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="TextAppearance.OnouremTypoStyles.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/montserrat_family</item>
+        <item name="android:fontFamily">@font/montserrat_family</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="TextAppearance.OnouremTypoStyles.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/montserrat_family</item>
+        <item name="android:fontFamily">@font/montserrat_family</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="TextAppearance.OnouremTypoStyles.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/montserrat_family</item>
+        <item name="android:fontFamily">@font/montserrat_family</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="AppTheme.TextButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAppearance">@style/AppTheme.TextButton.TextAppearance</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="android:insetLeft">2dp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingEnd">1dp</item>
+        <item name="android:paddingRight">1dp</item>
+        <item name="android:insetRight">2dp</item>
+    </style>
+
+    <style name="AppTheme.TextButton.TextAppearance" parent="TextAppearance.OnouremTypoStyles.Button">
+        <item name="android:textSize">14dp</item>
+
+    </style>
+
+    <style name="MaterialCardViewStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardCornerRadius">5dp</item>
+        <item name="cardElevation">4dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="BubblePagerIndicator">
+        <item name="bpi_fillColor">@color/default_bubble_indicator_fill_color</item>
+        <item name="bpi_pageColor">@color/default_bubble_indicator_page_color</item>
+        <item name="bpi_radius">@dimen/default_bubble_indicator_radius</item>
+        <item name="bpi_marginBetweenCircles">@dimen/default_bubble_indicator_circles_margin</item>
+        <item name="bpi_onSurfaceCount">@integer/default_bubble_indicator_on_surface_count</item>
+        <item name="bpi_risingCount">@integer/default_bubble_indicator_rising_count</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="AppTheme.Widget.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabBackground">@drawable/tab_background</item>
+        <item name="tabIndicatorColor">#ff00ff</item>
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabSelectedTextColor">@color/color_white</item>
+        <item name="tabStyle">@style/AppTextView.MediumTextBody</item>
+
+    </style>
+
+    <style name="TextAppearance.TabLayout.Tab" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@style/AppTextView.MediumTextBody</item>
+
+    </style>
+
+    <style name="Widget.AppTheme.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.AppTheme.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ChipTextAppearance" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+</resources>

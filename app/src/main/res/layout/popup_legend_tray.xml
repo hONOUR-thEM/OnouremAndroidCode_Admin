@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutLegendTray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_resopnded"
+        android:padding="10dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/appCompatTextView2"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/bg_unspecified"
+            android:drawableLeft="@drawable/bg_unspecified"
+            android:drawablePadding="8dp"
+            android:padding="4dp"
+
+            android:text="@string/label_unspecified"
+            app:layout_constraintBottom_toTopOf="@+id/appCompatTextView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/appCompatTextView3"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/bg_trans"
+            android:drawablePadding="8dp"
+            android:padding="4dp"
+
+            android:text="@string/label_trans"
+            app:layout_constraintBottom_toTopOf="@+id/appCompatTextView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/appCompatTextView4"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/bg_female"
+            android:drawableLeft="@drawable/bg_female"
+            android:drawablePadding="8dp"
+
+            android:padding="4dp"
+
+            android:text="@string/label_female"
+            app:layout_constraintBottom_toTopOf="@+id/appCompatTextView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/appCompatTextView5"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/bg_lessthan_17"
+            android:drawableLeft="@drawable/bg_lessthan_17"
+            android:drawablePadding="8dp"
+            android:padding="4dp"
+
+            android:text="@string/label_male"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

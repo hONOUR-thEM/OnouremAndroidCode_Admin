@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_optimizationLevel="cache_measures">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvCategoryName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="17dp"
+                app:fontFamily="@font/montserrat_bold"
+                app:layout_constraintEnd_toStartOf="@+id/tvDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Admire You" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/gray_color"
+                android:textSize="12dp"
+                android:visibility="gone"
+                app:fontFamily="@font/montserrat_light"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCategoryName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvCategoryName"
+                tools:text="2020-06-03" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivSenderProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toStartOf="@+id/guideline33"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCategoryName"
+
+                app:riv_border_color="@color/gray_color"
+                app:riv_border_width="1dp"
+                app:riv_corner_radius="50dp"
+                app:riv_mutate_background="true"
+                app:riv_oval="true"
+                app:srcCompat="@drawable/bg_female"
+                tools:src="@drawable/default_user_profile_image" />
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivIconVerified"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_verified"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/ivSenderProfile"
+                app:layout_constraintTop_toTopOf="@+id/ivSenderProfile"
+                tools:visibility="visible" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.15" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.85" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.50" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSenderName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintBottom_toBottomOf="@+id/ivSenderProfile"
+                app:layout_constraintEnd_toStartOf="@+id/guideline35"
+                app:layout_constraintStart_toEndOf="@+id/ivSenderProfile"
+                app:layout_constraintTop_toTopOf="@+id/ivSenderProfile"
+                tools:text="Kedar" />
+
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivReceiverProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@+id/ivSenderProfile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline34"
+                app:layout_constraintTop_toTopOf="@+id/ivSenderProfile"
+                app:riv_border_color="@color/gray_color"
+                app:riv_border_width="1dp"
+                app:riv_corner_radius="50dp"
+                app:riv_mutate_background="true"
+                app:riv_oval="true"
+                app:srcCompat="@drawable/bg_female"
+                tools:src="@drawable/default_user_profile_image" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvReceiverName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                app:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintBottom_toTopOf="@+id/tvMore"
+                app:layout_constraintEnd_toStartOf="@+id/guideline34"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline35"
+                app:layout_constraintTop_toTopOf="@+id/ivSenderProfile"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="Shailendra" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvMore"
+                style="@style/AppTextView.SmallTextBody.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="@+id/ivSenderProfile"
+                app:layout_constraintEnd_toStartOf="@+id/guideline34"
+                app:layout_constraintTop_toBottomOf="@+id/tvReceiverName"
+                tools:text="+1 more" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivSenderProfile">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvComment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    app:fontFamily="@font/montserrat_italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="...Read More"
+                    tools:visibility="visible" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvCommentFull"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    app:fontFamily="@font/montserrat_italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text=""
+                    tools:visibility="visible" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCommentAttachment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clComment"
+                app:srcCompat="@drawable/bg_female"
+                tools:visibility="visible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPlayVideo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCommentAttachment"
+                app:layout_constraintEnd_toEndOf="@+id/ivCommentAttachment"
+                app:layout_constraintStart_toStartOf="@+id/ivCommentAttachment"
+                app:layout_constraintTop_toTopOf="@+id/ivCommentAttachment"
+                app:srcCompat="@drawable/play"
+                tools:visibility="visible" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tvWriteComment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="?selectableItemBackground"
+                android:scaleType="centerInside"
+                android:tint="@color/gray_color"
+                app:layout_constraintBottom_toBottomOf="@+id/ivUserMoreAction"
+                app:layout_constraintEnd_toStartOf="@+id/ivUserMoreAction"
+                app:layout_constraintTop_toTopOf="@+id/ivUserMoreAction"
+                app:srcCompat="@drawable/ic_pen_comment" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCommentsCount"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivUserMoreAction"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toStartOf="@+id/tvWriteComment"
+                app:layout_constraintTop_toTopOf="@+id/ivUserMoreAction">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvCommentsCount"
+                    style="@style/AppTextView.ExtraSmallTextBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/gray_color"
+                    tools:text="1" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivUserMoreAction"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="?selectableItemBackground"
+                android:scaleType="centerInside"
+                android:tint="@color/gray_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivCommentAttachment"
+                app:srcCompat="@drawable/ic_more_menu_black_24dp" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivIconVerifiedReceiver"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_verified"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/ivReceiverProfile"
+                app:layout_constraintTop_toTopOf="@+id/ivReceiverProfile"
+                tools:visibility="visible" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/txtPushToSky"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:text="Push To Sky"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:backgroundTint="@color/green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivCommentAttachment"
+                tools:visibility="visible" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/txtRejectToSky"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:text="Reject"
+                app:backgroundTint="@color/color_red"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtPushToSky"
+                app:layout_constraintTop_toBottomOf="@+id/ivCommentAttachment"
+                tools:visibility="visible" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

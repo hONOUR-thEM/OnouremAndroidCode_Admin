@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="false"
+    android:focusable="false"
+    android:visibility="visible"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_optimizationLevel="cache_measures"
+        tools:showPaths="true">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:layout_width="170dp"
+            android:layout_height="180dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/family" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCheck"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:tint="@color/colorAccent"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/check" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textCL"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvValidTill"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Valid Till"
+                android:textSize="14dp"
+                app:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvValidTillText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="22 Dec 2022"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                app:fontFamily="@font/montserrat_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvValidTill" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSubCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Subscription Code"
+                android:textSize="14dp"
+                app:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvValidTillText" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSubscriptionCodeText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="XYZQWE12"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                app:fontFamily="@font/montserrat_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubCount" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSubCodeStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Status"
+                android:textSize="14dp"
+                app:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubscriptionCodeText" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSubCodeStatusText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Available"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                app:fontFamily="@font/montserrat_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubCodeStatus" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnShare"
+                style="@style/AppButton.OrangeButton.Small"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:textSize="11dp"
+                android:text="Share Subscription"
+                android:textAllCaps="false"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSubCodeStatusText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

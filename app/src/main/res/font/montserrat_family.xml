@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--    <font-->
+    <!--        app:font="@font/montserrat_regular"-->
+    <!--        app:fontStyle="normal" />-->
+    <!--    &lt;!&ndash;    <font&ndash;&gt;-->
+    <!--    &lt;!&ndash;        app:font="@font/montserrat_italic"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        &ndash;&gt;-->
+    <!--    &lt;!&ndash;        app:fontStyle="italic" />&ndash;&gt;-->
+
+    <!--    <font-->
+    <!--        app:font="@font/montserrat_bold"-->
+    <!--        app:fontStyle="normal" />-->
+    <!--    <font-->
+    <!--        app:font="@font/montserrat_bold"-->
+    <!--        app:fontStyle="italic" />-->
+
+    <!--    &lt;!&ndash;    <font&ndash;&gt;-->
+    <!--    &lt;!&ndash;        app:font="@font/montserrat_light"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        &ndash;&gt;-->
+    <!--    &lt;!&ndash;        app:fontStyle="normal" />&ndash;&gt;-->
+    <!--    &lt;!&ndash;    <font&ndash;&gt;-->
+    <!--    &lt;!&ndash;        app:font="@font/montserrat_light"&ndash;&gt;-->
+    <!--    &lt;!&ndash;        &ndash;&gt;-->
+    <!--    &lt;!&ndash;        app:fontStyle="italic" />&ndash;&gt;-->
+
+    <!--    <font-->
+    <!--        app:font="@font/montserrat_extrabold"-->
+    <!--        app:fontStyle="normal" />-->
+    <!--    <font-->
+    <!--        app:font="@font/montserrat_extrabold"-->
+    <!--        app:fontStyle="italic" />-->
+
+    <!--    <font-->
+    <!--        app:font="@font/montserrat_semibold"-->
+    <!--        app:fontStyle="normal" />-->
+    <!--    <font-->
+    <!--        app:font="@font/montserrat_semibold"-->
+    <!--        app:fontStyle="italic" />-->
+
+    <!--    <font-->
+    <!--        app:font="@font/montserrat_medium"-->
+    <!--        app:fontStyle="normal" />-->
+    <!--    <font-->
+    <!--        app:font="@font/montserrat_medium_italic"-->
+    <!--        -->
+    <!--        app:fontStyle="italic" />-->
+
+
+    <!--    New Api changes-->
+    <font
+        android:font="@font/montserrat_extrabold"
+        android:fontStyle="normal"
+        android:fontWeight="800"
+        app:font="@font/montserrat_extrabold"
+        app:fontStyle="normal"
+        app:fontWeight="800"
+        tools:ignore="UnusedAttribute" />
+
+    <font
+        android:font="@font/montserrat_extrabold"
+        android:fontStyle="italic"
+        android:fontWeight="800"
+        app:font="@font/montserrat_extrabold"
+        app:fontStyle="italic"
+        app:fontWeight="800"
+        tools:ignore="UnusedAttribute" />
+
+    <font
+        android:font="@font/montserrat_bold"
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        app:font="@font/montserrat_bold"
+        app:fontStyle="normal"
+        app:fontWeight="700"
+        tools:ignore="UnusedAttribute" />
+    <font
+        android:font="@font/montserrat_bold"
+        android:fontStyle="italic"
+        android:fontWeight="700"
+        app:font="@font/montserrat_bold"
+        app:fontStyle="italic"
+        app:fontWeight="700"
+        tools:ignore="UnusedAttribute" />
+
+    <font
+        android:font="@font/montserrat_semibold"
+        android:fontStyle="normal"
+        android:fontWeight="600"
+        app:font="@font/montserrat_semibold"
+        app:fontStyle="normal"
+        app:fontWeight="600"
+        tools:ignore="UnusedAttribute" />
+
+    <font
+        android:font="@font/montserrat_semibold"
+        android:fontStyle="italic"
+        android:fontWeight="600"
+        app:font="@font/montserrat_semibold"
+        app:fontStyle="italic"
+        app:fontWeight="600"
+        tools:ignore="UnusedAttribute" />
+
+    <font
+        android:font="@font/montserrat_medium"
+        android:fontStyle="normal"
+        android:fontWeight="500"
+        app:font="@font/montserrat_medium"
+        app:fontStyle="normal"
+        app:fontWeight="500"
+        tools:ignore="UnusedAttribute" />
+
+    <font
+        android:font="@font/montserrat_medium"
+        android:fontStyle="italic"
+        android:fontWeight="500"
+        app:font="@font/montserrat_medium"
+        app:fontStyle="italic"
+        app:fontWeight="500"
+        tools:ignore="UnusedAttribute" />
+
+    <font
+        android:font="@font/montserrat_regular"
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        app:font="@font/montserrat_regular"
+        app:fontStyle="normal"
+        app:fontWeight="400"
+        tools:ignore="UnusedAttribute" />
+    <font
+        android:font="@font/montserrat_regular"
+        android:fontStyle="italic"
+        android:fontWeight="400"
+        app:font="@font/montserrat_regular"
+        app:fontStyle="italic"
+        app:fontWeight="400"
+        tools:ignore="UnusedAttribute" />
+</font-family>

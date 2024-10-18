@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <!--            app:layout_constraintDimensionRatio="1:1"-->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSearch"
+            style="@style/MaterialCardViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--                <AutoCompleteTextView-->
+                <!--                    android:id="@+id/autoCompleteTextView"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--                    app:layout_constraintStart_toStartOf="parent"-->
+                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+                <AutoCompleteTextView
+                    android:id="@+id/edtSearchQuery"
+                    style="@style/AppTheme.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:completionThreshold="1"
+                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890"
+                    android:drawableStart="@drawable/ic_search_24_dp"
+                    android:drawablePadding="4dp"
+                    android:dropDownHeight="200dp"
+                    android:hint="Search Mood Here"
+                    android:inputType="textNoSuggestions"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="32dp"
+                    android:singleLine="true"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/ibClear"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@null"
+                    android:elevation="2dp"
+                    android:padding="4dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/edtSearchQuery"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edtSearchQuery"
+                    app:srcCompat="@drawable/ic_close_black_18dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/ivInfo"
+                    style="@style/AppTextView.SmallTextBody"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/txt_circle"
+                    android:gravity="center"
+                    android:text="i"
+                    android:textColor="@color/gray_color"
+                    android:tint="@color/gray_color"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardSearch">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSecond"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/txtNegative"
+                app:layout_constraintEnd_toStartOf="@+id/verticalLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtHighEnergy" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFirst"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/txtPositive"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rvSecond"
+                app:layout_constraintTop_toBottomOf="@+id/txtHighEnergy" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFourth"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/txtLowEnergy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rvSecond"
+                app:layout_constraintTop_toBottomOf="@+id/txtPositive" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvThird"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/txtLowEnergy"
+                app:layout_constraintEnd_toStartOf="@+id/rvFourth"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNegative" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtHighEnergy"
+                style="@style/AppTextView.SmallTextBody.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_border_rounded"
+                android:clickable="false"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="High Energy"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtLowEnergy"
+                style="@style/AppTextView.SmallTextBody.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edittext_border_rounded"
+                android:clickable="false"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Low Energy"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtPositive"
+                style="@style/AppTextView.SmallTextBody.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/edittext_border_rounded"
+                android:clickable="false"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Positive"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/horizontalLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/horizontalLine" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtNegative"
+                style="@style/AppTextView.SmallTextBody.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/edittext_border_rounded"
+                android:clickable="false"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Negative"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/horizontalLine"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/horizontalLine" />
+
+
+            <View
+                android:id="@+id/verticalLine"
+                android:layout_width="0.5dp"
+                android:layout_height="0dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintBottom_toTopOf="@+id/txtLowEnergy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtHighEnergy" />
+
+            <View
+                android:id="@+id/horizontalLine"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"
+                android:background="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txtPositive"
+                app:layout_constraintStart_toEndOf="@+id/txtNegative"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--            <com.github.mikephil.charting.charts.ScatterChart-->
+            <!--                android:id="@+id/scatterChart"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="0dp"-->
+            <!--                app:layout_constraintBottom_toTopOf="@+id/txtLowEnergy"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/txtHighEnergy" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

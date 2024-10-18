@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="?listPreferredItemHeight"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="8dp">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ibPlay"
+            android:layout_width="36dp"
+            android:layout_height="0dp"
+            android:scaleType="fitCenter"
+            android:tintMode="src_atop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_recording_play" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtAudioTitle"
+            style="@style/AppTextView.SmallTextBody.Bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/txtAudioDuration"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ibPlay"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtAudioDuration"
+            style="@style/AppTextView.SmallTextBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.2"
+            android:singleLine="true"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ibPlay"
+            app:layout_constraintTop_toBottomOf="@+id/txtAudioTitle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

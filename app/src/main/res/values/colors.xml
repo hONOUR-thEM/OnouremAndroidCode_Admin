@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008080</color>
+    <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="colorAccentAlpha25">#80008080</color>
+    <color name="colorAccentAlpha10">#40008080</color>
+    <color name="iitColor">#5117D5</color>
+
+    <color name="com_facebook_button_background_color">#415dae</color>
+    <color name="gray_color">#FFBFBFBF</color>
+    <color name="gray">#FFBFBFBF</color>
+    <color name="black_color_trans">#4D000000</color>
+    <color name="gray_color_light">#DFDEDE</color>
+    <color name="gray_color_light_line">#E9C99E</color>
+    <color name="color_gray_cross">#AFAFAF</color>
+
+    <color name="tilePointsTextColor">#19BFAD</color>
+    <color name="color_bg_dashboard">#fdd329</color>
+    <color name="color_splash_header_shape">#fab027</color>
+
+    <color name="color_red">#FF0000</color>
+    <color name="color_blue">#36BBDC</color>
+    <color name="color_pink">#F9659A</color>
+    <color name="color_green">#43AE30</color>
+    <color name="color_green_dark">#00B832</color>
+    <color name="light_grey">#F5F5F5</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="black">#000000</color>
+
+    <color name="color_transparent">#00000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_1">#FF25DCFF</color>
+    <color name="color_2">#FFF38715</color>
+    <color name="color_3">#FFF9659A</color>
+    <color name="color_4">#FF3AF65A</color>
+    <color name="color_5">#FF147789</color>
+    <color name="color_6">#FFF20613</color>
+    <color name="good_red_color">#F9659A</color>
+    <color name="good_red">@color/colorPrimary</color>
+    <color name="good_green_color">#43AE30</color>
+    <color name="good_green_color_as">#57965C</color>
+    <color name="good_red_color_as">#E63737</color>
+    <color name="green">#43AE30</color>
+
+    <color name="color_dark_gray">#919191</color>
+
+    <color name="color_highlight_game_post">#43AE30</color>
+    <color name="temp_color">#482429</color>
+
+    <color name="seek_bar_background">#ababab</color>
+    <color name="seek_bar_progress">@color/color_black</color>
+    <color name="seek_bar_secondary_progress">@color/gray_color</color>
+
+    <color name="transparent_bg">#55000000</color>
+    <color name="white">#ffffff</color>
+    <color name="yellow">#A6FFEB42</color>
+    <color name="dark_blue">#00021d</color>
+    <color name="transparent_bg_dark">#99000000</color>
+
+
+    <color name="waveform_selected">#33b5e5</color>
+    <color name="waveform_unselected">#195a72</color>
+    <color name="waveform_unselected_bkgnd_overlay">#0a242d</color>
+    <color name="transparent_black">#60000000</color>
+    <color name="selection_border">@color/colorAccent</color>
+    <color name="playback_indicator">@color/waveform_selected</color>
+    <color name="grid_line">#66ffffff</color>
+    <color name="timecode">#ddffffdd</color>
+    <color name="timecode_shadow">#aa000000</color>
+
+    <color name="type_bkgnd_alarm">#88880000</color>
+    <color name="type_bkgnd_ringtone">#88008888</color>
+    <color name="type_bkgnd_notification">#88666600</color>
+    <color name="type_bkgnd_music">#88000000</color>
+    <color name="type_bkgnd_unsupported">#88cccccc</color>
+    <color name="black_trans_60">#80505050</color>
+    <color name="semiTransparentColor">#20ffffff</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+
+    <!-- Sign-in Button Colors -->
+    <color name="common_signin_btn_dark_text_default">@android:color/white</color>
+    <color name="common_signin_btn_dark_text_pressed">@android:color/white</color>
+    <color name="common_signin_btn_dark_text_disabled">#FFAAAAAA</color>
+    <color name="common_signin_btn_dark_text_focused">@android:color/white</color>
+    <color name="common_signin_btn_light_text_default">#FF737373</color>
+    <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
+    <color name="common_signin_btn_light_text_disabled">#FFAAAAAA</color>
+    <color name="common_signin_btn_light_text_focused">#FF737373</color>
+    <color name="common_signin_btn_default_background">#FFDD4B39</color>
+    <color name="common_action_bar_splitter">#d2d2d2</color>
+
+</resources>

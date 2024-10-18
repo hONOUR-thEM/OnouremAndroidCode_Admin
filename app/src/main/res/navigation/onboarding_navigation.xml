@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding_navigation"
+    app:startDestination="@id/nav_splash">
+
+    <fragment
+        android:id="@+id/nav_onboarding"
+        android:name="com.onourem.android.activity.ui.onboarding.fragments.OnboardingFragment"
+        android:label="Onboarding"
+
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_nav_onboarding_to_loginFragment"
+            app:destination="@id/nav_login"
+            app:popUpTo="@+id/nav_onboarding"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_onboarding_to_nav_demo"
+            app:destination="@id/nav_demo" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_login"
+
+        android:name="com.onourem.android.activity.ui.onboarding.fragments.LoginFragment"
+        android:label="@string/label_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_nav_login_to_nav_forgot"
+            app:destination="@id/nav_forgot" />
+        <action
+            android:id="@+id/action_nav_login_to_nav_sign_up"
+            app:destination="@id/nav_sign_up" />
+        <action
+            android:id="@+id/action_nav_login_to_nav_date_picker"
+            app:destination="@id/nav_date_picker" />
+        <argument
+            android:name="EmailId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_nav_login_to_nav_verification"
+            app:destination="@id/nav_verification" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_forgot"
+
+        android:name="com.onourem.android.activity.ui.onboarding.fragments.ForgotPasswordFragment"
+        android:label="@string/label_request_password"
+        tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/nav_sign_up"
+
+        android:name="com.onourem.android.activity.ui.onboarding.fragments.SignUpFragment"
+        android:label="@string/label_sign_up"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_nav_sign_up_to_nav_verification"
+            app:destination="@id/nav_verification" />
+        <action
+            android:id="@+id/action_nav_sign_up_to_nav_web_content"
+            app:destination="@id/nav_web_content" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_splash"
+        android:name="com.onourem.android.activity.ui.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_nav_splash_to_nav_onboarding"
+            app:destination="@id/nav_onboarding"
+            app:popUpTo="@+id/nav_splash"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_splash_to_datePickerDialogFragment"
+            app:destination="@id/nav_date_picker" />
+        <action
+            android:id="@+id/action_nav_splash_to_nav_login"
+            app:destination="@id/nav_login"
+            app:popUpTo="@id/nav_splash"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_splash_to_nav_verification"
+            app:destination="@id/nav_verification" />
+        <action
+            android:id="@+id/action_nav_splash_to_nav_demo"
+            app:destination="@id/nav_demo" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/nav_date_picker"
+        android:name="com.onourem.android.activity.ui.dialog.DatePickerDialogFragment"
+        android:label=""
+        tools:layout="@layout/dialog_date_picker">
+        <action
+            android:id="@+id/action_nav_date_picker_to_nav_verification"
+            app:destination="@id/nav_verification" />
+    </dialog>
+    <fragment
+        android:id="@+id/nav_verification"
+        android:name="com.onourem.android.activity.ui.onboarding.fragments.VerificationFragment"
+        android:label="Email Verification">
+        <argument
+            android:name="EmailId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_nav_verification_to_nav_date_picker"
+            app:destination="@id/nav_date_picker" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_demo"
+        android:name="com.onourem.android.activity.ui.onboarding.fragments.DemoDialogFragment" />
+
+    <fragment
+        android:id="@+id/nav_web_content"
+        android:name="com.onourem.android.activity.ui.settings.fragments.WebContentFragment"
+        android:label="@string/label_terms_and_conditions">
+        <argument
+            android:name="webContent"
+            app:argType="com.onourem.android.activity.models.WebContent" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/nav_media_view"
+        android:name="com.onourem.android.activity.ui.dialog.MediaViewDialogFragment"
+        tools:layout="@layout/dialog_media_view">
+        <argument
+            android:name="media_type"
+            app:argType="integer" />
+        <argument
+            android:name="media_uri"
+            app:argType="string" />
+    </dialog>
+    <action
+        android:id="@+id/action_global_nav_media_view"
+        app:destination="@id/nav_media_view" />
+</navigation>

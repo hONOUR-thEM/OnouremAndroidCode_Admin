@@ -1,0 +1,207 @@
+{
+  "project_info": {
+    "project_number": "886982511318",
+    "firebase_url": "https://myonouremlogger.firebaseio.com",
+    "project_id": "myonouremlogger",
+    "storage_bucket": "myonouremlogger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886982511318:android:f0e38e064ecc0a23",
+        "android_client_info": {
+          "package_name": "com.onourem.android.activity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886982511318-3ectji71kl4i13bed95ucmdk2dim17n9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.onourem.android.activity",
+            "certificate_hash": "a6d959034dfe2722ff32bbfe1d894285f15a153f"
+          }
+        },
+        {
+          "client_id": "886982511318-ed4pu2mhodrth12qsrbc58ssj7d7krb3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.onourem.android.activity",
+            "certificate_hash": "85ed5a2bb60341d4cdaa19d9805d100b1b6effa5"
+          }
+        },
+        {
+          "client_id": "886982511318-hbvqosatcf0jni10req086pjvfh69m85.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.onourem.android.activity",
+            "certificate_hash": "1bec6a2ad0973fea76a97679f8fc210409c19372"
+          }
+        },
+        {
+          "client_id": "886982511318-8fam6ra4fud47dl7g5ha1pbqbti57rju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB64c337Pg-F3BXD17YvbTWFQQfx4_Cs3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886982511318-8fam6ra4fud47dl7g5ha1pbqbti57rju.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "886982511318-h3ir7rt6ogjl6hn0mn8n0gno0it38bqt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.onourem.onoureminternet",
+                "app_store_id": "1218240628"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886982511318:android:6f41ad9408b14fbb1b1777",
+        "android_client_info": {
+          "package_name": "com.onourem.android.activity.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886982511318-8fam6ra4fud47dl7g5ha1pbqbti57rju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB64c337Pg-F3BXD17YvbTWFQQfx4_Cs3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886982511318-8fam6ra4fud47dl7g5ha1pbqbti57rju.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "886982511318-h3ir7rt6ogjl6hn0mn8n0gno0it38bqt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.onourem.onoureminternet",
+                "app_store_id": "1218240628"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886982511318:android:b1f42e4c9d7a0a331b1777",
+        "android_client_info": {
+          "package_name": "com.onourem.android.activity.admin.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886982511318-8fam6ra4fud47dl7g5ha1pbqbti57rju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB64c337Pg-F3BXD17YvbTWFQQfx4_Cs3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886982511318-8fam6ra4fud47dl7g5ha1pbqbti57rju.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "886982511318-h3ir7rt6ogjl6hn0mn8n0gno0it38bqt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.onourem.onoureminternet",
+                "app_store_id": "1218240628"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886982511318:android:b4503bcfe97218f21b1777",
+        "android_client_info": {
+          "package_name": "com.onourem.android.activity.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886982511318-crp6u9conc8vga6mrt53aj8k5lmqhprr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.onourem.android.activity.dev",
+            "certificate_hash": "1bec6a2ad0973fea76a97679f8fc210409c19372"
+          }
+        },
+        {
+          "client_id": "886982511318-db5jac2nvpvisiqrlsq97l0jhhmkvf6p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.onourem.android.activity.dev",
+            "certificate_hash": "85ed5a2bb60341d4cdaa19d9805d100b1b6effa5"
+          }
+        },
+        {
+          "client_id": "886982511318-pflejhrfc02jj3cvul7df85mf388jmvm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.onourem.android.activity.dev",
+            "certificate_hash": "a6d959034dfe2722ff32bbfe1d894285f15a153f"
+          }
+        },
+        {
+          "client_id": "886982511318-8fam6ra4fud47dl7g5ha1pbqbti57rju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB64c337Pg-F3BXD17YvbTWFQQfx4_Cs3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886982511318-8fam6ra4fud47dl7g5ha1pbqbti57rju.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "886982511318-h3ir7rt6ogjl6hn0mn8n0gno0it38bqt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.onourem.onoureminternet",
+                "app_store_id": "1218240628"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
