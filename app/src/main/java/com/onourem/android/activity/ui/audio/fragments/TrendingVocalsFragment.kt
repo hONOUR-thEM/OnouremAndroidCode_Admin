@@ -15,8 +15,6 @@ import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.eazypermissions.common.model.PermissionResult
-import com.eazypermissions.coroutinespermission.PermissionManager
 import com.google.gson.Gson
 import com.onourem.android.activity.BuildConfig
 import com.onourem.android.activity.MobileNavigationDirections
@@ -46,6 +44,8 @@ import com.onourem.android.activity.ui.utils.Utilities
 import com.onourem.android.activity.ui.utils.listners.PaginationListener
 import com.onourem.android.activity.ui.utils.listners.ViewClickListener
 import com.onourem.android.activity.ui.utils.media.FFmpegQueryExtension
+import com.onourem.android.activity.ui.utils.permissions.PermissionManager
+import com.onourem.android.activity.ui.utils.permissions.PermissionResult
 import com.onourem.android.activity.viewmodel.DashboardViewModel
 import kotlinx.coroutines.*
 import javax.inject.Inject

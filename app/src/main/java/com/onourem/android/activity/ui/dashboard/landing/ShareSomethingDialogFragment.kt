@@ -16,8 +16,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.recyclerview.widget.ConcatAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.eazypermissions.common.model.PermissionResult
-import com.eazypermissions.coroutinespermission.PermissionManager
+
+import com.onourem.android.activity.ui.utils.permissions.PermissionManager
+import com.onourem.android.activity.ui.utils.permissions.PermissionResult
 import com.google.gson.Gson
 import com.onourem.android.activity.MobileNavigationDirections
 import com.onourem.android.activity.R

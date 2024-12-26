@@ -21,8 +21,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.eazypermissions.common.model.PermissionResult
-import com.eazypermissions.coroutinespermission.PermissionManager
+
+import com.onourem.android.activity.ui.utils.permissions.PermissionManager
+import com.onourem.android.activity.ui.utils.permissions.PermissionResult
 import com.onourem.android.activity.BuildConfig
 import com.onourem.android.activity.MobileNavigationDirections
 import com.onourem.android.activity.R

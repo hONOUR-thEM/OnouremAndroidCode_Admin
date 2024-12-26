@@ -66,6 +66,7 @@ android {
 
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
             signingConfig = signingConfigs.getByName("release")
+            multiDexEnabled = true
             ndk {
                 debugSymbolLevel = "SYMBOL_TABLE"
             }
@@ -78,6 +79,7 @@ android {
 
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
             signingConfig = signingConfigs.getByName("debug")
+            multiDexEnabled = true
             ndk {
                 debugSymbolLevel = "SYMBOL_TABLE"
             }
@@ -109,6 +111,7 @@ android {
             buildConfigField("boolean", "IS_ADMIN", "true")
             versionName = "${android.defaultConfig.versionName}.admin"
             dimension = "version"
+            signingConfig = signingConfigs.getByName("debug")
         }
 
         create("AdminProd") {
@@ -116,6 +119,7 @@ android {
             applicationIdSuffix = ".admin"
             versionName = "${android.defaultConfig.versionName}.admin"
             buildConfigField("boolean", "IS_ADMIN", "true")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 
@@ -248,7 +252,8 @@ dependencies {
 
     implementation("com.google.android.play:core:1.10.3")
     implementation("com.github.chrisbanes:PhotoView:2.3.0")
-    implementation("com.mindorks.android:prdownloader:0.6.0")
+//    implementation("com.mindorks.android:prdownloader:0.6.0")
+    implementation("com.github.amitshekhariitbhu:PRDownloader:1.0.1")
     implementation("com.arthenica:mobile-ffmpeg-full:4.4")
     //implementation ("com.github.SimformSolutionsPvtLtd:SSffmpegVideoOperation:1.0.6"
     implementation("com.daimajia.easing:library:2.4@aar")
@@ -267,7 +272,7 @@ dependencies {
 //    implementation("com.google.android.exoplayer:extension-mediasession:2.19.1")
     implementation("androidx.work:work-runtime-ktx:2.8.1")
 
-    implementation("com.sagar:coroutinespermission:2.0.3")
+//    implementation("com.sagar:coroutinespermission:2.0.3")
     implementation("org.mozilla:rhino:1.7.14")
 //    implementation files("libs/YouTubeAndroidPlayerApi.jar")
 //    implementation ("com.kizitonwose.calendar:view:1.1.0"

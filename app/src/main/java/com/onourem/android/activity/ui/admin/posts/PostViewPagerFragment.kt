@@ -15,8 +15,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavOptions
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.eazypermissions.common.model.PermissionResult
-import com.eazypermissions.coroutinespermission.PermissionManager
+
+import com.onourem.android.activity.ui.utils.permissions.PermissionManager
+import com.onourem.android.activity.ui.utils.permissions.PermissionResult
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.onourem.android.activity.MobileNavigationDirections

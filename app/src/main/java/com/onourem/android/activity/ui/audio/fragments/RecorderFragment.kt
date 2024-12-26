@@ -20,8 +20,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
-import com.eazypermissions.common.model.PermissionResult
-import com.eazypermissions.coroutinespermission.PermissionManager
+
+import com.onourem.android.activity.ui.utils.permissions.PermissionManager
+import com.onourem.android.activity.ui.utils.permissions.PermissionResult
 import com.github.squti.androidwaverecorder.RecorderState
 import com.github.squti.androidwaverecorder.WaveConfig
 import com.github.squti.androidwaverecorder.WaveRecorder

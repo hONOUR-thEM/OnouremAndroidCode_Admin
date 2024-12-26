@@ -17,8 +17,9 @@ import androidx.core.content.FileProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.eazypermissions.common.model.PermissionResult
-import com.eazypermissions.coroutinespermission.PermissionManager
+
+import com.onourem.android.activity.ui.utils.permissions.PermissionManager
+import com.onourem.android.activity.ui.utils.permissions.PermissionResult
 import com.onourem.android.activity.R
 import com.onourem.android.activity.arch.fragment.AbstractBaseBottomSheetDialogFragment
 import com.onourem.android.activity.prefs.SharedPreferenceHelper
